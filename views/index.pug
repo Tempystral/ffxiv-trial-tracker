@@ -1,0 +1,16 @@
+extends layout 
+
+block layout-content 
+  .view
+    .banner.header This belongs to class banner and header
+    .content
+      // Collection of duty groups
+      each collection in data.collections
+        .section-title=collection.title
+        .section-content
+          // Duties within a group
+          each duty in collection.duties 
+            .duty
+              .duty-title=duty.name
+              .duty-content
+    .footer

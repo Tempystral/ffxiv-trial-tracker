@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://tempystral.live/dutylist.schema.json",
+  "type": "object",
+
+  "definitions": {
+    "duty": {
+      "type": "object",
+      "properties": {
+        "trial": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "completed": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "image",
+            "completed"
+          ]
+        },
+        "dungeon": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "completed": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "image",
+            "completed"
+          ]
+        },
+        "raid": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "completed": {
+              "type": "boolean"
+            },
+            "savageCompleted": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "image",
+            "completed",
+            "savageCompleted"
+          ]
+        }
+      },
+      "oneOf": [
+        { "required": ["trial"] },
+        { "required": ["dungeon"] },
+        { "required": ["raid"] }
+      ]
+    },
+    "collection": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "duties": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/duty" },
+          "minOf": 1
+        }
+      }
+    }
+  },
+
+  
+  "collections": {
+    "type": "array",
+    "items": { "$ref": "#/definitions/collection" },
+    "required": [ { "$ref": "#/definitions/collection" } ],
+    "minItems": 1
+  },
+
+  "required": [ "collections" ]
+
+}
