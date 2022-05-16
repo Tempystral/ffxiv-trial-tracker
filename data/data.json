@@ -1,12 +1,12 @@
 {
   "collections": [
     {
-      "title": "ARR Extremes",
+      "title": "High-End Trials (A Realm Reborn)",
       "dutyType": "trial",
       "duties": [
         {
           "name": "The Bowl of Embers",
-          "image": "https://ffxiv.consolegameswiki.com/wiki/File:The_bowl_of_embers_extreme_banner1.png",
+          "image": "../public/img/The_bowl_of_embers_extreme_banner1.png",
           "completed": false
         }
         
@@ -18,27 +18,27 @@
       "duties": [
         {
           "name": "The Binding Coil of Bahamut - Turn 1",
-          "image": "https://ffxiv.consolegameswiki.com/wiki/File:The_Binding_Coil_of_Bahamut_-_Turn_1.png",
+          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_1.png",
           "completed": false
         },
         {
           "name": "The Binding Coil of Bahamut - Turn 2",
-          "image": "https://ffxiv.consolegameswiki.com/wiki/File:The_Binding_Coil_of_Bahamut_-_Turn_2.png",
+          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_2.png",
           "completed": false
         },
         {
           "name": "The Binding Coil of Bahamut - Turn 3",
-          "image": "https://ffxiv.consolegameswiki.com/wiki/File:The_Binding_Coil_of_Bahamut_-_Turn_3.png",
+          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_3.png",
           "completed": false
         },
         {
           "name": "The Binding Coil of Bahamut - Turn 4",
-          "image": "https://ffxiv.consolegameswiki.com/wiki/File:The_Binding_Coil_of_Bahamut_-_Turn_4.png",
+          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_4.png",
           "completed": false
         },
         {
           "name": "The Binding Coil of Bahamut - Turn 5",
-          "image": "https://ffxiv.consolegameswiki.com/wiki/File:The_Binding_Coil_of_Bahamut_-_Turn_4.png",
+          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_4.png",
           "completed": false
         }
       ]

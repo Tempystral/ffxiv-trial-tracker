@@ -18,6 +18,7 @@ const data = JSON.parse(fs.readFileSync('./data/data.json'))
 
 app.set("views", path.join(path.dirname("."), "views"));
 app.set("view engine", "pug");
+app.use("/public", express.static(path.dirname(".") + "/public"))
 
 /**
  * Routes Definitions

@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "nodemon ./index.js",
     "ui": "browser-sync start --config bs-config.cjs",
-    "xiv": "node ./test.js"
+    "xiv": "node ./test.js",
+    "sass": "sass ./sass ./public/css"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
   },
   "dependencies": {
     "@xivapi/js": "^0.4.1",
+    "bulma": "^0.9.4",
     "express": "^4.18.1",
     "node-fetch": "^3.2.4",
     "normalize.css": "^8.0.1",
