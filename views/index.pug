@@ -2,15 +2,24 @@ extends layout
 
 block layout-content 
   .view
-    .banner.header This belongs to class banner and header
     .content
-      // Collection of duty groups
-      each collection in data.collections
-        .section-title=collection.title
-        .section-content
-          // Duties within a group
-          each duty in collection.duties 
-            .duty
-              .duty-title=duty.name
-              .duty-content
+      .title.is-1.has-text-centered Final Fantasy XIV Duty Tracker
+    .content.tile.is-parent
+      .tile
+        //- Collection of duty groups
+        each collection in data.collections
+          .duty-group.tile.is-child.box
+            .group-title.title.is-3.has-text-centered #{collection.title}
+            .group-content.columns.is-multiline
+              //- Duties within a group
+              each duty in collection.duties
+                .column.is-half
+                  .duty.card.has-text-centered
+                    .duty-image.card-image
+                      .image.is-3by1
+                        img(src=`${duty.image}`)
+                    .card-header
+                    .card-content
+                      .duty-title.title.is-5 #{duty.name}
+                      .duty-content This is some content!
     .footer

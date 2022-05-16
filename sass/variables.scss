@@ -1,0 +1,40 @@
+$gold-fill:  #9e8b46;
+$gold-shadow: #64604f;
+$silver-fill: #c6d2df;
+$silver-shadow: #4b4b4b;
+
+@font-face {
+  font-family: "Jupiter Pro Bold";
+  src: url("../font/JupiterPro-Bold.woff2") format("woff2"),
+       url("../font/JupiterPro-Bold.woff") format("woff")
+  ;
+}
+
+@font-face {
+  font-family: "Eurostile Regular";
+  src: url("../font/EurostileRegular.woff2") format("woff2"),
+       url("../font/EurostileRegular.woff") format("woff")
+  ;
+}
+
+
+@mixin bevel($text-color, $bevel-color, $highlight-color) {
+  -webkit-text-stroke: 0.010em $text-color;
+  -webkit-text-fill-color: transparent;
+  color: rgba($text-color, 1);
+  text-shadow:
+    0       0.040em 0.0375em  $text-color,
+    0       0       0         $highlight-color,
+    0.05em  0.04em  0.0375em  $bevel-color,
+    0em    .1em    .3em      black; 
+    
+  position: relative;
+  z-index: 0;
+}
+
+@mixin contained-bg {
+  background: {
+    repeat: no-repeat;
+    size: cover;
+  }
+}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+@use "../node_modules/bulma/bulma.sass";
+@use "animations" as *;
+@use "variables" as *;
+
+.duty {
+  @include contained-bg;
+  background-image: url("../img/canvas.jpg");
+  border: {
+    style: inset;
+    radius: 1em;
+    color: silver;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+  .duty-image {
+    .image {
+      img {
+        border-radius: 1em 1em 0 0;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
+      }
+    }
+  }
+  .duty-title {
+    font-family: "Jupiter Pro Bold";
+    @include bevel($silver-fill, $silver-shadow, white);
+  }
+  .duty-content {
+    font: {
+      family: "Eurostile Regular";
+      size: 1.2em;
+    }
+  }
+}
+
+.title {
+  font-family: "Jupiter Pro Bold";
+  @include bevel($gold-fill, $gold-shadow, white);
+}
