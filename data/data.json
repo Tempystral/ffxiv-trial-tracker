@@ -5,43 +5,158 @@
       "dutyType": "trial",
       "duties": [
         {
-          "name": "The Bowl of Embers",
-          "image": "../public/img/The_bowl_of_embers_extreme_banner1.png",
+          "name": "the Bowl of Embers (Extreme)",
+          "image": "https://xivapi.com/i/112000/112028.png",
+          "completed": false
+        },
+        {
+          "name": "the Navel (Extreme)",
+          "image": "https://xivapi.com/i/112000/112029.png",
+          "completed": false
+        },
+        {
+          "name": "the Howling Eye (Extreme)",
+          "image": "https://xivapi.com/i/112000/112030.png",
+          "completed": false
+        },
+        {
+          "name": "Thornmarch (Extreme)",
+          "image": "https://xivapi.com/i/112000/112050.png",
+          "completed": false
+        },
+        {
+          "name": "the Minstrel's Ballad: Ultima's Bane",
+          "image": "https://xivapi.com/i/112000/112032.png",
+          "completed": false
+        },
+        {
+          "name": "the Whorleater (Extreme)",
+          "image": "https://xivapi.com/i/112000/112052.png",
+          "completed": false
+        },
+        {
+          "name": "the Striking Tree (Extreme)",
+          "image": "https://xivapi.com/i/112000/112063.png",
+          "completed": false
+        },
+        {
+          "name": "the Akh Afah Amphitheatre (Extreme)",
+          "image": "https://xivapi.com/i/112000/112074.png",
           "completed": false
         }
-        
       ]
     },
     {
-      "title": "The Binding Coil of Bahamut",
-      "dutyType": "trial",
+      "title": "The Crystal Tower",
+      "dutyType": "allianceraid",
       "duties": [
         {
-          "name": "The Binding Coil of Bahamut - Turn 1",
-          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_1.png",
+          "name": "the Labyrinth of the Ancients",
+          "image": "https://xivapi.com/i/112000/112033.png",
           "completed": false
         },
         {
-          "name": "The Binding Coil of Bahamut - Turn 2",
-          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_2.png",
+          "name": "Syrcus Tower",
+          "image": "https://xivapi.com/i/112000/112061.png",
           "completed": false
         },
         {
-          "name": "The Binding Coil of Bahamut - Turn 3",
-          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_3.png",
-          "completed": false
-        },
-        {
-          "name": "The Binding Coil of Bahamut - Turn 4",
-          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_4.png",
-          "completed": false
-        },
-        {
-          "name": "The Binding Coil of Bahamut - Turn 5",
-          "image": "../public/img/The_Binding_Coil_of_Bahamut_-_Turn_4.png",
+          "name": "the World of Darkness",
+          "image": "https://xivapi.com/i/112000/112079.png",
           "completed": false
         }
       ]
+    },
+    
+    {
+      "title": "The Coils of Bahamut",
+      "dutyType": "raid",
+      "duties": [
+        {
+          "raidset": "the Binding Coil of Bahamut",
+          "raids": [
+            {
+              "name": "the Binding Coil of Bahamut - Turn 1",
+              "image": "https://xivapi.com/i/112000/112043.png",
+              "completed": false
+            },
+            {
+              "name": "the Binding Coil of Bahamut - Turn 2",
+              "image": "https://xivapi.com/i/112000/112044.png",
+              "completed": false
+            },
+            {
+              "name": "the Binding Coil of Bahamut - Turn 3",
+              "image": "https://xivapi.com/i/112000/112045.png",
+              "completed": false
+            },
+            {
+              "name": "the Binding Coil of Bahamut - Turn 4",
+              "image": "https://xivapi.com/i/112000/112046.png",
+              "completed": false
+            },
+            {
+              "name": "the Binding Coil of Bahamut - Turn 5",
+              "image": "https://xivapi.com/i/112000/112047.png",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "raidset": "the Second Coil of Bahamut",
+          "raids": [
+            {
+              "name": "the Second Coil of Bahamut - Turn 1",
+              "image": "https://xivapi.com/i/112000/112038.png",
+              "completed": false,
+              "savageCompleted": false
+            },
+            {
+              "name": "the Second Coil of Bahamut - Turn 2",
+              "image": "https://xivapi.com/i/112000/112039.png",
+              "completed": false,
+              "savageCompleted": false
+            },
+            {
+              "name": "the Second Coil of Bahamut - Turn 3",
+              "image": "https://xivapi.com/i/112000/112040.png",
+              "completed": false,
+              "savageCompleted": false
+            },
+            {
+              "name": "the Second Coil of Bahamut - Turn 4",
+              "image": "https://xivapi.com/i/112000/112041.png",
+              "completed": false,
+              "savageCompleted": false
+            }
+          ]
+        },
+        {
+          "raidset": "the Final Coil of Bahamut",
+          "raids": [
+            {
+              "name": "the Final Coil of Bahamut - Turn 1",
+              "image": "https://xivapi.com/i/112000/112069.png",
+              "completed": false
+            },
+            {
+              "name": "the Final Coil of Bahamut - Turn 2",
+              "image": "https://xivapi.com/i/112000/112070.png",
+              "completed": false
+            },
+            {
+              "name": "the Final Coil of Bahamut - Turn 3",
+              "image": "https://xivapi.com/i/112000/112071.png",
+              "completed": false
+            },
+            {
+              "name": "the Final Coil of Bahamut - Turn 4",
+              "image": "https://xivapi.com/i/112000/112072.png",
+              "completed": false
+            }
+          ]
+        }
+      ]
     }
-  ] 
+  ]
 }

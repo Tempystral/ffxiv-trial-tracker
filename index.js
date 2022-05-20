@@ -26,7 +26,15 @@ app.use("/public", express.static(path.dirname(".") + "/public"))
 
 app.get("/", (req, res) => {
   //res.status(200).send("THIS IS A TEST");
-  res.render("index", {title: "Home", data: data});
+  res.render("index", { title: "Home",
+                        data: data,
+                        scalefactor: {
+                          "fullhd": 24,
+                          "widescreen": 32,
+                          "desktop": 36,
+                          "tablet": 48
+                        }
+                      });
 });
 
 /**
