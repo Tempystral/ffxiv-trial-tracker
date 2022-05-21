@@ -44,6 +44,14 @@ function isExp(exp){
   }
 }
 
+function chunkArray(myArray, chunk_size){
+  var results = [];
+  while (myArray.length) {
+      results.push(myArray.splice(0, chunk_size));
+  }
+  return results;
+}
+
 /**
  * Creates a collection of trials.
  * @param {any[]} data 
@@ -56,22 +64,44 @@ function isExp(exp){
   // Init collection
   console.log("Creating collection");
   var collection = {
-    title: name.concat(type == "trial" ? `(${expansion.get(exp)})` : ""),
+    title: name.concat(type == "trial" ? ` (${expansion.get(exp)})` : ""),
     dutyType: type,
     duties: []
   }
   // Add duties to collection
   console.log("Structuring duties");
-  data.filter(isExp(exp)).forEach( duty => {
-    collection.duties.push(
-      {
-        name: duty.Name,
-        image: `https://xivapi.com${duty.Image}`,
-        completed: false,
-        ...(type == "raid") && {savageCompleted: false}
+  var filteredData = data.filter(isExp(exp));
+
+  if (type != "raid") {
+    filteredData.forEach( duty => {
+      collection.duties.push(
+        {
+          name: duty.Name,
+          id: duty.ID,
+          image: `https://xivapi.com${duty.Image}`,
+          completed: false,
+          ...(type == "raid") && {savageCompleted: false}
+        });
+    });
+  }
+  else { // Split data into chunks of 4
+    chunkArray(filteredData, 4).forEach(arr => {
+      collection.duties.push(
+        {
+          raidset: "Raid Set",
+          raids: arr.map( duty => {
+            return {
+              name: duty.Name,
+              id: duty.ID,
+              image: `https://xivapi.com${duty.Image}`,
+              completed: false,
+              ...(type == "raid") && {savageCompleted: false}
+            }
+          })
+        });
       });
-  });
+  }
   return collection;
 }
 
-export { createCollection, isAllianceRaid, isHighEndDuty, isNormalRaid }
+export { createCollection, isAllianceRaid, isHighEndDuty, isNormalRaid, expansion }
