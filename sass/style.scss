@@ -116,7 +116,8 @@
   font-family: "Jupiter Pro Regular";
   @include bevel($gold-fill, $gold-shadow, white);
   -webkit-font-smoothing: subpixel-antialiased;
-  writing-mode: sideways-lr;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
 }
 
 #heading, .group-title {
