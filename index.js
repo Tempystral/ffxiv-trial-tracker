@@ -11,7 +11,7 @@ import favicon from "serve-favicon";
 const app = express();
 const port = process.env.PORT || 8000;
 const data = JSON.parse(fs.readFileSync('./data/data.json'))
-
+const siteName = "Final Fantasy XIV Duty Tracker";
 
 /**
  *  App Configuration
@@ -26,10 +26,15 @@ app.use(favicon(path.join(path.dirname("."), "public/img/favicon.ico")))
  */
 
 app.get("/", (req, res) => {
-  //res.status(200).send("THIS IS A TEST");
-  res.render("index", { title: "Home",
-                        data: data
-                      });
+  res.render("all", { title: siteName, data: data });
+});
+
+app.get("/A_Realm_Reborn", (req, res) => {
+  res.render("single", { title: siteName + " - A Realm Reborn", exp: data.expansions[0] });
+});
+
+app.get("/Heavensward", (req, res) => {
+  res.render("single", { title: siteName + " - Heavensward", exp: data.expansions[1] });
 });
 
 /**

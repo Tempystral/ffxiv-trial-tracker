@@ -1,34 +1,4 @@
-extends layout 
-
-block layout-content 
-  each exp in data.expansions
-    .view
-      .container.has-text-centered.is-max-desktop
-        //-#heading.title.is-1.has-text-centered Final Fantasy XIV Duty Tracker
-        figure.image
-          img(src=exp.image)
-      .content.tile.is-parent
-        .columns.is-multiline
-          //- Collection of duty groups
-          each collection in exp.collections
-                +group-content(collection)
-                  //- Duties within a group
-                  each duty in collection.duties
-                    .column.is-half
-                      .duty.card.has-text-centered
-                        .duty-image.card-image
-                          .image.is-3by1
-                            img(src=`${duty.image}`)
-                        .card-header
-                        .card-content
-                          .duty-title.title.is-5 #{duty.name}
-                          .duty-content This is some content!
-  .footer
-
-//- Use mixins to style each type of content differently
-//- Use mixins to define wordy content widths per viewport size outside of the main hierarchy
-
-mixin group-content(collection)
+mixin duty-group-container(collection)
   if collection.dutyType == "raid"
     .column.is-2-fullhd.is-1-widescreen.is-0
     .column.is-8-fullhd.is-10-widescreen.is-12-desktop.is-12-tablet
@@ -38,12 +8,10 @@ mixin group-content(collection)
     .column.is-2-fullhd.is-1-widescreen.is-0
 
   else if collection.dutyType == "trial"
-    //.column.is-2-fullhd.is-0
     .column.is-8-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet
       .group-title.title.is-2.has-text-centered #{collection.title}
       .duty-group.box
         +trial(collection)
-    //.column.is-2-fullhd.is-0
 
   else if collection.dutyType == "allianceraid"
     .column.is-4-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet
@@ -94,7 +62,7 @@ mixin allianceraid(collection)
   .group-content.columns.is-multiline.is-centered
     each duty in collection.duties
       .column.is-6-fullhd.is-4-widescreen.is-4-desktop.is-4-tablet
-        .duty.card.has-text-centered
+        .duty.card.has-text-centered(id=`${collection.dutyType}-${duty.id}`)
           .duty-image.card-image
             .image.is-3by1
               img(src=`${duty.image}`)
@@ -110,11 +78,11 @@ mixin raid(collection)
         .tile.is-parent.is-vertical.is-1
           .raid-set-title-container.tile.is-child.box
             img(src=`../public/img/gold-trim-top.png`)
-            .raid-set-title.title.is-4 #{duty.raidset}
+            .raid-set-title.title.is-3 #{duty.raidset}
             img(src=`../public/img/gold-trim-bottom.png`)
         .tile.is-parent.is-vertical.is-11
           each raid in duty.raids
-            .duty.raid.tile.is-child.box
+            .duty.raid.tile.is-child.box(id=`${collection.dutyType}-${raid.id}`)
               .columns.is-gapless.is-multiline
                 .column.is-2
                 .raid-content.column.is-4

@@ -65,16 +65,19 @@
           "duties": [
             {
               "name": "the Labyrinth of the Ancients",
+              "id": 30001,
               "image": "https://xivapi.com/i/112000/112033.png",
               "completed": false
             },
             {
               "name": "Syrcus Tower",
+              "id": 30011,
               "image": "https://xivapi.com/i/112000/112061.png",
               "completed": false
             },
             {
               "name": "the World of Darkness",
+              "id": 30020,
               "image": "https://xivapi.com/i/112000/112079.png",
               "completed": false
             }
@@ -188,8 +191,81 @@
     {
       "name": "Heavensward",
       "image": "../public/img/banners/hw_logo_small.png",
+      "bgimg": "../public/img/foundation.webp",
       "id": "1",
       "collections": [
+        {
+          "title": "High-End Trials (Heavensward)",
+          "dutyType": "trial",
+          "duties": [
+            {
+              "name": "Thok ast Thok (Extreme)",
+              "id": 87,
+              "image": "https://xivapi.com/i/112000/112107.png",
+              "completed": false
+            },
+            {
+              "name": "the Limitless Blue (Extreme)",
+              "id": 89,
+              "image": "https://xivapi.com/i/112000/112105.png",
+              "completed": false
+            },
+            {
+              "name": "the Minstrel's Ballad: Thordan's Reign",
+              "id": 91,
+              "image": "https://xivapi.com/i/112000/112122.png",
+              "completed": false
+            },
+            {
+              "name": "Containment Bay S1T7 (Extreme)",
+              "id": 135,
+              "image": "https://xivapi.com/i/112000/112127.png",
+              "completed": false
+            },
+            {
+              "name": "the Minstrel's Ballad: Nidhogg's Rage",
+              "id": 170,
+              "image": "https://xivapi.com/i/112000/112161.png",
+              "completed": false
+            },
+            {
+              "name": "Containment Bay P1T6 (Extreme)",
+              "id": 184,
+              "image": "https://xivapi.com/i/112000/112202.png",
+              "completed": false
+            },
+            {
+              "name": "Containment Bay Z1T9 (Extreme)",
+              "id": 224,
+              "image": "https://xivapi.com/i/112000/112213.png",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "title": "Alliance Raids",
+          "dutyType": "allianceraid",
+          "duties": [
+            {
+              "name": "the Void Ark",
+              "id": 120,
+              "image": "https://xivapi.com/i/112000/112118.png",
+              "completed": false
+            },
+            {
+              "name": "the Weeping City of Mhach",
+              "id": 168,
+              "image": "https://xivapi.com/i/112000/112162.png",
+              "completed": false
+            },
+            {
+              "name": "Dun Scaith",
+              "id": 220,
+              "image": "https://xivapi.com/i/112000/112203.png",
+              "completed": false
+            }
+          ]
+        },
         {
           "title": "Alexander",
           "dutyType": "raid",
@@ -292,30 +368,6 @@
                   "savageCompleted": false
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Alliance Raids",
-          "dutyType": "allianceraid",
-          "duties": [
-            {
-              "name": "the Void Ark",
-              "id": 120,
-              "image": "https://xivapi.com/i/112000/112118.png",
-              "completed": false
-            },
-            {
-              "name": "the Weeping City of Mhach",
-              "id": 168,
-              "image": "https://xivapi.com/i/112000/112162.png",
-              "completed": false
-            },
-            {
-              "name": "Dun Scaith",
-              "id": 220,
-              "image": "https://xivapi.com/i/112000/112203.png",
-              "completed": false
             }
           ]
         }
