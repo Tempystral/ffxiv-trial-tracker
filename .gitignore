@@ -3,3 +3,4 @@
 .vscode/*
 **/css/
 **:Zone.Identifier
+data/test.json

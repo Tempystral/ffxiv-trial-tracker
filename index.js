@@ -2,6 +2,7 @@
 import express from "express";
 import fs from "fs";
 import path from "path";
+import favicon from "serve-favicon";
 
 /**
  * App Variables
@@ -15,10 +16,10 @@ const data = JSON.parse(fs.readFileSync('./data/data.json'))
 /**
  *  App Configuration
  */
-
 app.set("views", path.join(path.dirname("."), "views"));
 app.set("view engine", "pug");
 app.use("/public", express.static(path.dirname(".") + "/public"))
+app.use(favicon(path.join(path.dirname("."), "public/img/favicon.ico")))
 
 /**
  * Routes Definitions
@@ -27,13 +28,7 @@ app.use("/public", express.static(path.dirname(".") + "/public"))
 app.get("/", (req, res) => {
   //res.status(200).send("THIS IS A TEST");
   res.render("index", { title: "Home",
-                        data: data,
-                        scalefactor: {
-                          "fullhd": 24,
-                          "widescreen": 32,
-                          "desktop": 36,
-                          "tablet": 48
-                        }
+                        data: data
                       });
 });
 

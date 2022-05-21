@@ -1,27 +1,29 @@
 extends layout 
 
 block layout-content 
-  .view
-    .container.has-text-centered
-      //-#heading.title.is-1.has-text-centered Final Fantasy XIV Duty Tracker
-      img(src="../public/img/logo_en.png")
-    .content.tile.is-parent
-      .columns.is-multiline
-        //- Collection of duty groups
-        each collection in data.collections
-              +group-content(collection)
-                //- Duties within a group
-                each duty in collection.duties
-                  .column.is-half
-                    .duty.card.has-text-centered
-                      .duty-image.card-image
-                        .image.is-3by1
-                          img(src=`${duty.image}`)
-                      .card-header
-                      .card-content
-                        .duty-title.title.is-5 #{duty.name}
-                        .duty-content This is some content!
-    .footer
+  each exp in data.expansions
+    .view
+      .container.has-text-centered.is-max-desktop
+        //-#heading.title.is-1.has-text-centered Final Fantasy XIV Duty Tracker
+        figure.image
+          img(src=exp.image)
+      .content.tile.is-parent
+        .columns.is-multiline
+          //- Collection of duty groups
+          each collection in exp.collections
+                +group-content(collection)
+                  //- Duties within a group
+                  each duty in collection.duties
+                    .column.is-half
+                      .duty.card.has-text-centered
+                        .duty-image.card-image
+                          .image.is-3by1
+                            img(src=`${duty.image}`)
+                        .card-header
+                        .card-content
+                          .duty-title.title.is-5 #{duty.name}
+                          .duty-content This is some content!
+  .footer
 
 //- Use mixins to style each type of content differently
 //- Use mixins to define wordy content widths per viewport size outside of the main hierarchy
@@ -79,7 +81,7 @@ mixin trial(collection)
   .group-content.columns.is-multiline
     each duty in collection.duties
       .column.is-3-fullhd.is-3-widescreen.is-3-desktop.is-4-tablet
-        .duty.card.has-text-centered
+        .duty.card.has-text-centered(id=`${collection.dutyType}-${duty.id}`)
           .duty-image.card-image
             .image.is-3by1
               img(src=`${duty.image}`)
