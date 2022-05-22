@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "@xivapi/js": "^0.4.1",
+    "brushstroke": "github:lmgonzalves/brushstroke",
     "bulma": "^0.9.4",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "node-fetch": "^3.2.4",
     "normalize.css": "^8.0.1",
