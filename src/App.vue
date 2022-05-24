@@ -1,23 +1,23 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from "vue";
+import Pugtest from "./components/Pugtest.vue";
+
+const dataObj = { name: 'This is the name var' };
+// Do I only need to use ref() for dynamic data?
+// Consider: You will want to populate the pages with data from your main json file,
+// with names and images and everything, but the actual data being manipulated by the user is a subset of that data
+
 </script>
 
 <template lang="pug">
 
 img(alt="Vue logo" src="./assets/logo.png")
-HelloWorld(msg="Hello Vue 3 + TypeScript + Vite")
+
+//- Note the colon, which we are using to v-bind the object
+//- Equivalent to Pugtest( v-bind:data={ name: 'This is the name var' } )
+Pugtest( v-bind:data="dataObj" )
 
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
