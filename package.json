@@ -8,7 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@nabla/vite-plugin-eslint": "^1.4.0",
@@ -27,7 +28,7 @@
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
     "vue-eslint-parser": "^9.0.2",
-    "vue-pug-plugin": "^1.0.16",
+    "vue-pug-plugin": "^2.0.0",
     "vue-tsc": "^0.34.7"
   }
 }
