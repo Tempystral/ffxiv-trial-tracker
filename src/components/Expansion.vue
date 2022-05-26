@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type Expansion } from '../types';
+import DutyContainer from "./DutyContainer.vue"
 
 defineProps<{
   exp: Expansion
@@ -16,8 +17,8 @@ defineProps<{
     .columns.is-multiline
       //- Collection of duty groups
       each collection in exp.collections
+        DutyContainer(:collection="collection")
         //- +duty-group-container(collection)
-        p= collection.title
 </template>
 
 <style scoped>

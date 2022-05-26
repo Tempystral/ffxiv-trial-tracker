@@ -2,7 +2,7 @@
 **/node_modules/
 .vscode/*
 **/css/
-**:Zone.Identifier
+**Zone.Identifier
 data/test.json
 
 # Logs

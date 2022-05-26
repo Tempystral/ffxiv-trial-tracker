@@ -27,6 +27,7 @@
     "no-fallthrough": "off",
     "prefer-const": "error",
     "no-mixed-spaces-and-tabs": "off",
+    "no-unused-vars": "off",
     "prettier/prettier": "off",
     "vue/max-attributes-per-line": "off",
     "vue/html-indent": "off",
@@ -35,7 +36,8 @@
     "vue/multi-word-component-names": "off",
     "@typescript-eslint/no-extra-semi": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/ban-ts-comment": "off"
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": "off"
   },
   "globals": {
     "defineProps": "readonly",

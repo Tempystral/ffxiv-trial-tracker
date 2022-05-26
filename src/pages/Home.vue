@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Pugtest from "../components/Pugtest.vue";
 
 import * as gamedata from "../assets/data.json";
 import Expansion from "../components/Expansion.vue";
 // Do I only need to use ref() for dynamic data?
 // Consider: You will want to populate the pages with data from your main json file,
 // with names and images and everything, but the actual data being manipulated by the user is a subset of that data
-
+import sassStyles from '../assets/sass/style.scss';
 
 </script>
 
