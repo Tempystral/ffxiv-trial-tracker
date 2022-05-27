@@ -5,6 +5,7 @@ import DutyContainer from "./DutyContainer.vue"
 defineProps<{
   exp: Expansion
 }>()
+
 </script>
 
 <template lang="pug">
