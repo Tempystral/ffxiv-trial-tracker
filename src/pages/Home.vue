@@ -9,7 +9,7 @@ import sassStyles from '../assets/sass/style.scss';
 const showModal = ref(false)
 
 function toggleModal() {
-	showModal.value = !showModal.value
+	showModal.value = !showModal.value;
 }
 </script>
 

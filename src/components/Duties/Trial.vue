@@ -1,6 +1,5 @@
 <script setup lang='ts'>
 import { type Collection } from "../../types";
-import sassStyles from '/assets/sass/style.scss';
 
 defineProps<{
 	collection: Collection

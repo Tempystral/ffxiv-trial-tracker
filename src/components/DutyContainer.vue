@@ -3,7 +3,6 @@ import { type Collection } from '../types';
 import Raid from './Duties/Raid.vue';
 import Trial from './Duties/Trial.vue';
 import AllianceRaid from './Duties/AllianceRaid.vue';
-import sassStyles from '../assets/sass/style.scss';
 
 defineProps<{
 	collection: Collection
