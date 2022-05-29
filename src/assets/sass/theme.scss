@@ -1,0 +1,7 @@
+@mixin theme-border($theme) {
+  border-style: solid;
+  border-image-source: url("/assets/img/theme/frame_#{$theme}.png");
+  border-image-slice: 25%;
+  border-image-width: 12%;
+  z-index: 1;
+}

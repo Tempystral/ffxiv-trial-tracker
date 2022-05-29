@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import localforage from 'localforage';
+import { onMounted } from 'vue';
 import { type Expansion } from '../types';
 import DutyContainer from "./DutyContainer.vue"
 
@@ -6,12 +8,14 @@ defineProps<{
   exp: Expansion
 }>()
 
+
+
 </script>
 
 <template lang="pug">
 .view
   //- (style=`background-image: url(${exp.bgimg})`)
-  .container.has-text-centered.is-max-desktop
+  .container.is-max-desktop
     figure.image
       img(:src='exp.image')
   .content.tile.is-parent
