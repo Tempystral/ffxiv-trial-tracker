@@ -2,7 +2,6 @@
 import { type Collection } from '../types';
 import Raid from './Duties/Raid.vue';
 import Trial from './Duties/Trial.vue';
-import AllianceRaid from './Duties/AllianceRaid.vue';
 
 defineProps<{
 	collection: Collection
@@ -37,7 +36,7 @@ else if collection.dutyType == 'allianceraid'
 			.group-content.columns.is-multiline.is-centered
 				each duty in collection.duties
 					.column.is-6-fullhd.is-4-widescreen.is-4-desktop.is-4-tablet
-						AllianceRaid(:dutyType='collection.dutyType', :duty='duty')
+						Trial(:dutyType='collection.dutyType', :duty='duty')
 </template>
 
 <style>

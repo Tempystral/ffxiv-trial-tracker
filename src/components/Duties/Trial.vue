@@ -28,12 +28,14 @@ function shimmer() {
 </script>
 
 <template lang='pug'>
-.duty.card.has-text-centered(:id="dutyType + '-' + duty.id" @click='markDuty' :class='{ "complete": checked, "shine shine-anim": animating }')
-	.duty-image.card-image
+.duty.card.has-text-centered(:id="dutyType + '-' + duty.id" @click='markDuty' :class='{ "shine shine-anim": animating }')
+	.duty-image.card-image( :class='{ "complete": checked }' )
 		.image.is-3by1
 			img(:src="duty.image")
 	.card-header
 	.card-content
 		.duty-title.title.is-5 #{duty.name}
 		.duty-content This is some content!
+	.fill-element(v-if='checked')
+		img.X(src="/assets/img/X.png")
 </template>

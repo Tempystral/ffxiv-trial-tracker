@@ -17,6 +17,7 @@
   &:hover {
     transform: scale(0.95);
   }
+  cursor: pointer;
 }
 
 .column {
@@ -73,49 +74,22 @@
   }
 }
 
+.fill-element {
+  @include fill-element;
+}
+
 .duty {
   height: 100%; // Fix to make column content full-height
+  // Background
   @include contained-bg;
   background-image: url("../img/canvas.jpg");
   background-size: cover;
   background-position: center center;
   overflow: hidden;
+
+  // Theme
   @include metal-border;
 
-  &.complete {
-  }
-
-  transition: all 0.1s ease-in-out;
-  &:hover {
-    transform: scale(1.05);
-  }
-  &.raid {
-    padding: 0;
-    .raid-content > div {
-      padding-block-start: b.$box-padding;
-      padding-block-end: b.$box-padding;
-    }
-  }
-  .duty-image .image img {
-    border-radius: 1em 1em 0 0;
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 0)
-    );
-  }
-  .raid-image .image {
-    img {
-      height: 100%;
-    }
-    height: 100%;
-    border-radius: 0 1em 1em 0;
-    -webkit-mask-image: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 1) 80%,
-      rgba(0, 0, 0, 0)
-    );
-  }
   .duty-title {
     font-family: "Jupiter Pro Regular";
     @include bevel($silver-fill, $silver-shadow, white);
@@ -126,6 +100,53 @@
       size: 1.2em;
     }
   }
+
+  .complete img {
+    transition: all 0.5s ease;
+    -webkit-filter: grayscale(100%) brightness(100%);
+    filter: grayscale(100%) brightness(100%);
+    //opacity: 0.6;
+  }
+
+  // Animation
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  // Image
+  .duty-image .image img {
+    border-radius: 1em 1em 0 0;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  &.raid {
+    padding: 0;
+    .raid-content > div {
+      padding-block-start: b.$box-padding;
+      padding-block-end: b.$box-padding;
+    }
+    .raid-image .image {
+      img {
+        height: 100%;
+      }
+      height: 100%;
+      border-radius: 0 1em 1em 0;
+      -webkit-mask-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
+}
+
+.X {
+  max-height: 100%;
+  width: auto;
 }
 
 .raid-set-title-container {
