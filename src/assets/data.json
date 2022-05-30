@@ -12,50 +12,74 @@
             {
               "name": "the Bowl of Embers (Extreme)",
               "id": 63,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112028.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "the Navel (Extreme)",
               "id": 64,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112029.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "the Howling Eye (Extreme)",
               "id": 65,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112030.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "Thornmarch (Extreme)",
               "id": 67,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112050.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "the Minstrel's Ballad: Ultima's Bane",
               "id": 68,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112032.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "the Whorleater (Extreme)",
               "id": 73,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112052.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "the Striking Tree (Extreme)",
               "id": 78,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112063.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "the Akh Afah Amphitheatre (Extreme)",
               "id": 80,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112074.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             }
           ]
         },
@@ -65,21 +89,30 @@
           "duties": [
             {
               "name": "the Labyrinth of the Ancients",
-              "id": 30001,
+              "id": 92,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112033.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "Syrcus Tower",
-              "id": 30011,
+              "id": 102,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112061.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             },
             {
               "name": "the World of Darkness",
-              "id": 30020,
+              "id": 111,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112079.png",
-              "completed": false
+              "objectives": [
+                "normal"
+              ]
             }
           ]
         },

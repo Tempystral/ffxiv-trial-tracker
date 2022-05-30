@@ -18,20 +18,23 @@ export type Collection = {
 
 export interface RaidSet {
   raidset: string;
-  raids: Array<Raid>;
+  raids: Array<Duty>;
 }
 
 export interface Duty {
   name: string;
   id: number;
+  type: string;
   image: string;
+  objectives: Array<{ name: string; completed: boolean }>;
 }
 
-export interface Raid extends Duty {
-  completed: boolean;
-  savageCompleted?: boolean;
-}
-
-export interface Trial extends Duty {
-  completed: boolean;
+export enum Objective {
+  NORMAL = "normal",
+  SAVAGE = "savage",
+  ROLL = "orchestrion roll",
+  MOUNT = "mount",
+  MINION = "minion",
+  CARD = "triple triad card",
+  ACHEIVEMENT = "achievement"
 }
