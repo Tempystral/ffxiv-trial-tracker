@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import localforage from 'localforage';
-import { onMounted } from 'vue';
 import { type Expansion } from '../types';
 import DutyContainer from "./DutyContainer.vue"
 
@@ -23,8 +21,4 @@ defineProps<{
       //- Collection of duty groups
       each collection in exp.collections
         DutyContainer(:collection="collection")
-        //- +duty-group-container(collection)
 </template>
-
-<style scoped>
-</style>

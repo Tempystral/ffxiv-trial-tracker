@@ -1,33 +1,43 @@
 <script setup lang='ts'>
-import { type Raid } from "../../types";
+import { ref } from "vue";
+import { useStore } from "../../ts/store";
+import { Objective, type Duty } from "../../types";
 
-defineProps<{
+const props = defineProps<{
 	dutyType: string
-	duty: Raid
+	duty: Duty
 }>()
+
+const store = useStore();
+
+const checked = ref(false);
+const animating = ref(false);
+
+function markDuty() {
+	//console.log(e.currentTarget);
+	checked.value = !checked.value;
+	store.isDone(props.duty, Objective.NORMAL, checked.value)
+	shimmer()
+}
+
+function shimmer() {
+	animating.value = true;
+	// setTimeout(() => {
+	// 	animating.value = false;
+	// }, 700);
+}
 
 </script>
 
 <template lang='pug'>
-.raid-set-container.tile.is-12
-	.tile.is-parent.is-vertical.is-1
-		.raid-set-title-container.tile.is-child.box
-			img(src=`/assets/img/gold-trim-top.png`)
-			.raid-set-title.title.is-3 #{duty.raidset}
-			img(src=`/assets/img/gold-trim-bottom.png`)
-	.tile.is-parent.is-vertical.is-11
-		each raid in duty.raids
-			.duty.raid.tile.is-child.box(:id="dutyType + '-' + raid.id")
-				.columns.is-gapless.is-multiline
-					.column.is-2
-					.raid-content.column.is-4
-						div
-							.duty-title.title.is-5 #{raid.name}
-							.duty-content This is some content!
-					.raid-image.column.is-6
-						.image.is-fullwidth
-							img(:src='raid.image')
+.duty.raid.tile.is-child.box(:id="dutyType + '-' + duty.id" @click='markDuty' :class='{ "shine shine-anim": animating }')
+	.columns.is-gapless.is-multiline
+		.column.is-2
+		.raid-content.column.is-4
+			div
+				.duty-title.title.is-5 #{duty.name}
+				.duty-content This is some content!
+		.raid-image.column.is-6
+			.image.is-fullwidth
+				img(:src='duty.image')
 </template>
-
-<style>
-</style>

@@ -125,6 +125,7 @@
   }
   &.raid {
     padding: 0;
+    position: relative;
     .raid-content > div {
       padding-block-start: b.$box-padding;
       padding-block-end: b.$box-padding;

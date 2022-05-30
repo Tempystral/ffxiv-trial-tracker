@@ -1,6 +1,4 @@
-
 <template lang="pug">
-
 .container
 	.tile.is-ancestor.is-vertical 
 		.tile.is-12
@@ -16,7 +14,6 @@
 				.tile.is-child
 					img(src="/assets/img/moogle-delivery.png")
 			.tile.is-parent.is-vertical.is-2
-
 </template>
 
 <style lang="scss">

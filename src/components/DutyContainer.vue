@@ -17,7 +17,15 @@ if collection.dutyType == 'raid'
 		.duty-group.box.tile.is-ancestor
 			.group-content.tile.is-vertical
 				each duty in collection.duties
-					Raid(:dutyType='collection.dutyType', :duty='duty')
+					.raid-set-container.tile.is-12
+						.tile.is-parent.is-vertical.is-1
+							.raid-set-title-container.tile.is-child.box
+								img(src=`/assets/img/gold-trim-top.png`)
+								.raid-set-title.title.is-3 #{duty.raidset}
+								img(src=`/assets/img/gold-trim-bottom.png`)
+						.tile.is-parent.is-vertical.is-11
+							each raid in duty.raids
+								Raid(:dutyType='collection.dutyType', :duty='raid')
 	.column.is-2-fullhd.is-1-widescreen.is-0
 
 else if collection.dutyType == 'trial'
@@ -38,6 +46,3 @@ else if collection.dutyType == 'allianceraid'
 					.column.is-6-fullhd.is-4-widescreen.is-4-desktop.is-4-tablet
 						Trial(:dutyType='collection.dutyType', :duty='duty')
 </template>
-
-<style>
-</style>
