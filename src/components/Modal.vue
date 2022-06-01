@@ -43,21 +43,26 @@ function reset() {
 	.modal-background( @click="closeModal" )
 	.modal-card
 		header.modal-card-head
-			p.modal-card-title Settings 
+			p.modal-card-title Settings
+			button.is-medium.delete(aria-label="close" @click="closeModal")
+		hr
 		section.modal-card-body 
-			.box
+			//- .box
 				p Theme 
+			.box.level
+				.level-left
+					.level-item
+						p Click here to reset all settings: 
+					.level-item
+						button.button.is-danger(@click="reset") #{resetText}
 			.box
-				button.button.is-danger(@click="reset") #{resetText}
-			.box
-				p Credits 
+				details
+					summary Credits
+					p Credits 
 		footer.modal-card-foot.is-block
 			.level
 				.level-left
 					.level-item
 						p.subtitle.is-5 © Tempystral #{new Date().getFullYear()}
-				.level-right
-					.level-item 
-						a.button Close 
 
 </template>
