@@ -20,9 +20,9 @@ if collection.dutyType == 'raid'
 					.raid-set-container.tile.is-12
 						.tile.is-parent.is-vertical.is-1
 							.raid-set-title-container.tile.is-child.box
-								img(src=`/assets/img/gold-trim-top.png`)
+								//- img(src=`/assets/img/gold-trim-top.png`)
 								.raid-set-title.title.is-3 #{duty.raidset}
-								img(src=`/assets/img/gold-trim-bottom.png`)
+								//- img(src=`/assets/img/gold-trim-bottom.png`)
 						.tile.is-parent.is-vertical.is-11
 							each raid in duty.raids
 								Raid(:dutyType='collection.dutyType', :duty='raid')

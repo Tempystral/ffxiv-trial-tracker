@@ -85,7 +85,7 @@
   background-image: url("../img/canvas.jpg");
   background-size: cover;
   background-position: center center;
-  overflow: hidden;
+  overflow: clip;
 
   // Theme
   @include metal-border;
@@ -156,7 +156,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  border: {
+    style: ridge;
+    width: 4px;
+    radius: 2em;
+    color: #dedede #c5c5c5;
+    top: none;
+    left: none;
+    bottom: none;
+  }
 }
 
 .raid-set-title {

@@ -1,9 +1,13 @@
 <script setup lang='ts'>
+import localforage from "localforage";
 import { ref } from "vue";
 import { useStore } from "../../ts/store";
 import { Objective, type Duty } from "../../types";
 
 const store = useStore();
+store.$subscribe((state) => {
+	localforage.setItem("duties", state);
+});
 
 const checked = ref(false);
 const animating = ref(false);
