@@ -38,3 +38,5 @@ export enum Objective {
   CARD = "triple triad card",
   ACHEIVEMENT = "achievement"
 }
+
+export type UserData = Array<Pick<Duty, "id" | "type" | "objectives">>;

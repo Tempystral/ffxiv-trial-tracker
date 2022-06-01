@@ -86,6 +86,7 @@
   background-size: cover;
   background-position: center center;
   overflow: clip;
+  cursor: pointer;
 
   // Theme
   @include metal-border;

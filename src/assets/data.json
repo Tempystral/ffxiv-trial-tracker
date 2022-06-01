@@ -15,7 +15,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112028.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -24,7 +27,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112029.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -33,7 +39,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112030.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -42,7 +51,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112050.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -51,7 +63,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112032.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -60,7 +75,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112052.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -69,7 +87,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112063.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -78,7 +99,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112074.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             }
           ]
@@ -93,7 +117,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112033.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -102,7 +129,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112061.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             },
             {
@@ -111,7 +141,10 @@
               "type": "trial",
               "image": "https://xivapi.com/i/112000/112079.png",
               "objectives": [
-                "normal"
+                {
+                  "name": "normal",
+                  "completed": false
+                }
               ]
             }
           ]
@@ -126,32 +159,62 @@
                 {
                   "name": "the Binding Coil of Bahamut - Turn 1",
                   "id": 30002,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112043.png",
-                  "completed": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Binding Coil of Bahamut - Turn 2",
                   "id": 30003,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112044.png",
-                  "completed": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Binding Coil of Bahamut - Turn 3",
                   "id": 30004,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112045.png",
-                  "completed": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Binding Coil of Bahamut - Turn 4",
                   "id": 30005,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112046.png",
-                  "completed": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Binding Coil of Bahamut - Turn 5",
                   "id": 30006,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112047.png",
-                  "completed": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 }
               ]
             },
@@ -162,29 +225,65 @@
                   "name": "the Second Coil of Bahamut - Turn 1",
                   "image": "https://xivapi.com/i/112000/112038.png",
                   "id": 30007,
-                  "completed": false,
-                  "savageCompleted": false
+                  "type": "raid",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Second Coil of Bahamut - Turn 2",
                   "image": "https://xivapi.com/i/112000/112039.png",
                   "id": 30008,
-                  "completed": false,
-                  "savageCompleted": false
+                  "type": "raid",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Second Coil of Bahamut - Turn 3",
                   "image": "https://xivapi.com/i/112000/112040.png",
                   "id": 30009,
-                  "completed": false,
-                  "savageCompleted": false
+                  "type": "raid",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Second Coil of Bahamut - Turn 4",
                   "image": "https://xivapi.com/i/112000/112041.png",
                   "id": 30010,
-                  "completed": false,
-                  "savageCompleted": false
+                  "type": "raid",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 }
               ]
             },
@@ -195,25 +294,49 @@
                   "name": "the Final Coil of Bahamut - Turn 1",
                   "image": "https://xivapi.com/i/112000/112069.png",
                   "id": 30016,
-                  "completed": false
+                  "type": "raid",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Final Coil of Bahamut - Turn 2",
                   "image": "https://xivapi.com/i/112000/112070.png",
                   "id": 30017,
-                  "completed": false
+                  "type": "raid",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Final Coil of Bahamut - Turn 3",
                   "image": "https://xivapi.com/i/112000/112071.png",
                   "id": 30018,
-                  "completed": false
+                  "type": "raid",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "the Final Coil of Bahamut - Turn 4",
                   "image": "https://xivapi.com/i/112000/112072.png",
                   "id": 30019,
-                  "completed": false
+                  "type": "raid",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    }
+                  ]
                 }
               ]
             }
@@ -234,44 +357,86 @@
             {
               "name": "Thok ast Thok (Extreme)",
               "id": 87,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112107.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             },
             {
               "name": "the Limitless Blue (Extreme)",
               "id": 89,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112105.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             },
             {
               "name": "the Minstrel's Ballad: Thordan's Reign",
               "id": 91,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112122.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             },
             {
               "name": "Containment Bay S1T7 (Extreme)",
               "id": 135,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112127.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             },
             {
               "name": "the Minstrel's Ballad: Nidhogg's Rage",
               "id": 170,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112161.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             },
             {
               "name": "Containment Bay P1T6 (Extreme)",
               "id": 184,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112202.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             },
             {
               "name": "Containment Bay Z1T9 (Extreme)",
               "id": 224,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112213.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             }
           ]
         },
@@ -282,123 +447,249 @@
             {
               "name": "the Void Ark",
               "id": 120,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112118.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             },
             {
               "name": "the Weeping City of Mhach",
               "id": 168,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112162.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             },
             {
               "name": "Dun Scaith",
               "id": 220,
+              "type": "trial",
               "image": "https://xivapi.com/i/112000/112203.png",
-              "completed": false
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Alexander",
+          "title": "Raids",
           "dutyType": "raid",
           "duties": [
             {
-              "raidset": "Alexander: Gordias",
+              "raidset": "Raid Set",
               "raids": [
                 {
                   "name": "Alexander - The Fist of the Father",
                   "id": 112,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112095.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Cuff of the Father",
                   "id": 113,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112096.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Arm of the Father",
                   "id": 114,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112097.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Burden of the Father",
                   "id": 115,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112098.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 }
               ]
             },
             {
-              "raidset": "Alexander: Midas",
+              "raidset": "Raid Set",
               "raids": [
                 {
                   "name": "Alexander - The Fist of the Son",
                   "id": 136,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112128.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Cuff of the Son",
                   "id": 137,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112129.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Arm of the Son",
                   "id": 138,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112130.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Burden of the Son",
                   "id": 139,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112131.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 }
               ]
             },
             {
-              "raidset": "Alexander: The Creator",
+              "raidset": "Raid Set",
               "raids": [
                 {
                   "name": "Alexander - The Eyes of the Creator",
                   "id": 186,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112188.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Breath of the Creator",
                   "id": 187,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112189.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Heart of the Creator",
                   "id": 188,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112190.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 },
                 {
                   "name": "Alexander - The Soul of the Creator",
                   "id": 189,
+                  "type": "raid",
                   "image": "https://xivapi.com/i/112000/112191.png",
-                  "completed": false,
-                  "savageCompleted": false
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
                 }
               ]
             }

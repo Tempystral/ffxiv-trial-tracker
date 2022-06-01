@@ -4,18 +4,18 @@ import { ref } from "vue";
 import { useStore } from "../../ts/store";
 import { Objective, type Duty } from "../../types";
 
-const store = useStore();
-store.$subscribe((state) => {
-	localforage.setItem("duties", state);
-});
-
-const checked = ref(false);
-const animating = ref(false);
-
 const props = defineProps<{
 	dutyType: string,
 	duty: Duty
 }>()
+
+const store = useStore();
+store.$subscribe((_, state) => {
+	localforage.setItem("duties", JSON.stringify(state));
+});
+
+const checked = ref(store.isObjectiveComplete(props.duty, Objective.NORMAL) || false);
+const animating = ref(false);
 
 function markDuty() {
 	//console.log(e.currentTarget);

@@ -3,12 +3,32 @@ import { onMounted, ref } from 'vue';
 import Modal from '/components/Modal.vue';
 import sassStyles from '/assets/sass/style.scss';
 import localforage from 'localforage';
+import { useStore } from './ts/store';
+import { type UserData } from './types';
+import { getLocalForageSafe, isUserData } from './ts/util';
 
 // Ensure localforage is set up before anything else
 localforage.config({
 	name: "FFXIV Tracker",
 	storeName: "ffxivtracker"
 });
+
+const store = useStore();
+getLocalForageSafe("duties").then(res => {
+	if (res.success == true) {
+		const data = res.value as { duties: object };
+		if (isUserData(data.duties)) {
+			store.$state.duties = data.duties;
+			console.log(store.$state.duties);
+		}
+	}
+	else {
+		console.log(res.error)
+	}
+});
+
+
+
 
 const showModal = ref(false)
 
