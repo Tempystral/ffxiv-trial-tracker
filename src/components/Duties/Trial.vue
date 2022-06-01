@@ -10,9 +10,6 @@ const props = defineProps<{
 }>()
 
 const store = useStore();
-store.$subscribe((_, state) => {
-	localforage.setItem("duties", JSON.stringify(state));
-});
 
 const checked = ref(store.isObjectiveComplete(props.duty, Objective.NORMAL) || false);
 const animating = ref(false);

@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import Modal from '/components/Modal.vue';
 import sassStyles from '/assets/sass/style.scss';
 import localforage from 'localforage';
 import { useStore } from './ts/store';
-import { type UserData } from './types';
 import { getLocalForageSafe, isUserData } from './ts/util';
 
 // Ensure localforage is set up before anything else
@@ -14,6 +13,7 @@ localforage.config({
 });
 
 const store = useStore();
+// Load data
 getLocalForageSafe("duties").then(res => {
 	if (res.success == true) {
 		const data = res.value as { duties: object };
@@ -26,15 +26,17 @@ getLocalForageSafe("duties").then(res => {
 		console.log(res.error)
 	}
 });
-
-
-
+// Subscribe to state changes app-wide
+store.$subscribe((_, state) => {
+	localforage.setItem("duties", JSON.stringify(state));
+});
 
 const showModal = ref(false)
 
 function toggleModal() {
 	showModal.value = !showModal.value;
 }
+
 
 </script>
 
