@@ -13,7 +13,7 @@ const store = useStore();
 
 // These are the signals the modal can output for other components to listen to
 const emit = defineEmits([
-	"close"
+	"close", "reset"
 ])
 
 // Output a close emit to whatever component is listening
@@ -32,6 +32,7 @@ function reset() {
 		resetText.value = "Data reset";
 		store.$state = { duties: [] };
 		console.log("Data reset");
+		emit("reset");
 	}
 }
 

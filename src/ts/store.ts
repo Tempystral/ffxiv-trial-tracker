@@ -17,22 +17,24 @@ export const useStore = defineStore("dutyStore", {
     }
   },
   actions: {
-    isDone(duty: Duty, obj: Objective, state: boolean) {
+    markDone(duty: Duty, obj: Objective) {
       const index: number = this.duties.findIndex((d) => d.id == duty.id);
       if (index == -1) {
         // Not in index, create a new one
         this.duties.push({
           id: duty.id,
           type: duty.type,
-          objectives: [{ name: obj, completed: state }]
+          objectives: [{ name: obj, completed: true }]
         });
       } else {
         const objIndex = this.duties[index].objectives.findIndex(
           (o) => o.name == obj
         );
         if (index == -1) {
-          this.duties[index].objectives.push({ name: obj, completed: state });
-        } else this.duties[index].objectives[objIndex].completed = state;
+          this.duties[index].objectives.push({ name: obj, completed: true });
+        } else
+          this.duties[index].objectives[objIndex].completed =
+            !this.duties[index].objectives[objIndex].completed;
       }
     }
   }

@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { type Expansion } from '../types';
 import DutyContainer from "./DutyContainer.vue"
 
-defineProps<{
+const props = defineProps<{
   exp: Expansion
 }>()
-
-
 
 </script>
 

@@ -5,25 +5,20 @@ $silver-shadow: #4b4b4b;
 
 @font-face {
   font-family: "Jupiter Pro Bold";
-  src: url("../font/JupiterPro-Bold.woff2") format("woff2"),
-    url("../font/JupiterPro-Bold.woff") format("woff");
+  src: url("@/assets/font/JupiterPro-Bold.woff2") format("woff2"),
+    url("@/assets/font/JupiterPro-Bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Jupiter Pro Regular";
-  src: url("../font/JupiterPro-Regular.woff2") format("woff2"),
-    url("../font/JupiterPro-Regular.woff") format("woff");
+  src: url("@/assets/font/JupiterPro-Regular.woff2") format("woff2"),
+    url("@/assets/font/JupiterPro-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Eurostile Regular";
-  src: url("../font/EurostileRegular.woff2") format("woff2"),
-    url("../font/EurostileRegular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "FFXIV Icons";
-  src: url("../../../classjob-icons/font/FFXIVAppIcons.woff") format("woff");
+  src: url("@/assets/font/EurostileRegular.woff2") format("woff2"),
+    url("@/assets/font/EurostileRegular.woff") format("woff");
 }
 
 @mixin vcenter {

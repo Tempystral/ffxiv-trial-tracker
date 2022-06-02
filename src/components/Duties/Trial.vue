@@ -10,14 +10,11 @@ const props = defineProps<{
 }>()
 
 const store = useStore();
-
-const checked = ref(store.isObjectiveComplete(props.duty, Objective.NORMAL) || false);
 const animating = ref(false);
 
 function markDuty() {
-	//console.log(e.currentTarget);
-	checked.value = !checked.value;
-	store.isDone(props.duty, Objective.NORMAL, checked.value)
+	store.markDone(props.duty, Objective.NORMAL)
+	console.log(`Marked duty ${props.duty.id} as done`)
 	shimmer()
 }
 
