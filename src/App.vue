@@ -51,3 +51,7 @@ router-view
 
 Modal(:show='showModal' @close="toggleModal")
 </template>
+
+<style lang="scss">
+@use "/assets/sass/style.scss"as *;
+</style>

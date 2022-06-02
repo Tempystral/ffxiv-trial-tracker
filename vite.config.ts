@@ -16,14 +16,14 @@ export default defineConfig({
         }
       }
     })
-  ],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
-          @import "./src/assets/sass/style.scss";
-        `
-      }
-    }
-  }
+  ]
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `
+  //         @import "./src/assets/sass/style.scss";
+  //       `
+  //     }
+  //   }
+  // }
 });
