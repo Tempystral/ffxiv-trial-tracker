@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Modal from '/components/Modal.vue';
-import sassStyles from '/assets/sass/style.scss';
 import localforage from 'localforage';
 import { useStore } from './ts/store';
 import { getLocalForageSafe, isUserData } from './ts/util';
