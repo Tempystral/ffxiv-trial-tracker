@@ -12,11 +12,18 @@ export default defineConfig({
     vue({
       template: {
         preprocessOptions: {
-          plugins: [
-            vuePugPlugin
-          ]
+          plugins: [vuePugPlugin]
         }
       }
     })
-  ]
+  ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "./src/assets/sass/style.scss";
+        `
+      }
+    }
+  }
 });
