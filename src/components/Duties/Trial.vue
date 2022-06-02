@@ -35,7 +35,7 @@ function shimmer() {
 	.card-header
 	.card-content
 		.duty-title.title.is-5 #{duty.name}
-		.duty-content This is some content!
+		.duty-content
 	.fill-element(v-if='store.isObjectiveComplete(duty, Objective.NORMAL)')
 		img.X(src="/assets/img/X.png")
 </template>

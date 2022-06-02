@@ -11,13 +11,20 @@ export const useStore = defineStore("dutyStore", {
     },
     isObjectiveComplete() {
       return (duty: Duty, name: string) => {
-        return this.getDuty(duty.id)?.objectives.find((o) => o.name, name)
+        return this.getDuty(duty.id)?.objectives.find((o) => o.name == name)
           ?.completed;
+      };
+    },
+    areObjectivesComplete() {
+      return (duty: Duty, ...names: Array<string>) => {
+        return names.every((name) => {
+          return this.isObjectiveComplete(duty, name);
+        });
       };
     }
   },
   actions: {
-    markDone(duty: Duty, obj: Objective) {
+    markDone(duty: Duty, obj: string) {
       const index: number = this.duties.findIndex((d) => d.id == duty.id);
       if (index == -1) {
         // Not in index, create a new one
@@ -30,7 +37,7 @@ export const useStore = defineStore("dutyStore", {
         const objIndex = this.duties[index].objectives.findIndex(
           (o) => o.name == obj
         );
-        if (index == -1) {
+        if (objIndex == -1) {
           this.duties[index].objectives.push({ name: obj, completed: true });
         } else
           this.duties[index].objectives[objIndex].completed =

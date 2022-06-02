@@ -188,3 +188,13 @@
 .shine {
   @include shine;
 }
+
+.objective-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .image {
+    overflow: clip;
+  }
+}

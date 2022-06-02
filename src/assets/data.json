@@ -441,7 +441,7 @@
           ]
         },
         {
-          "title": "Alliance Raids",
+          "title": "Shadow of Mhach",
           "dutyType": "allianceraid",
           "duties": [
             {
@@ -483,11 +483,11 @@
           ]
         },
         {
-          "title": "Raids",
+          "title": "Alexander",
           "dutyType": "raid",
           "duties": [
             {
-              "raidset": "Raid Set",
+              "raidset": "Gordius",
               "raids": [
                 {
                   "name": "Alexander - The Fist of the Father",
@@ -556,7 +556,7 @@
               ]
             },
             {
-              "raidset": "Raid Set",
+              "raidset": "Midas",
               "raids": [
                 {
                   "name": "Alexander - The Fist of the Son",
@@ -625,7 +625,7 @@
               ]
             },
             {
-              "raidset": "Raid Set",
+              "raidset": "The Creator",
               "raids": [
                 {
                   "name": "Alexander - The Eyes of the Creator",
