@@ -2,7 +2,7 @@
   "expansions": [
     {
       "name": "A Realm Reborn",
-      "image": "/assets/img/banners/arr_logo_small.png",
+      "image": "/img/banners/arr_logo_small.png",
       "id": "0",
       "collections": [
         {
@@ -346,8 +346,8 @@
     },
     {
       "name": "Heavensward",
-      "image": "/assets/img/banners/hw_logo_small.png",
-      "bgimg": "/assets/img/foundation.webp",
+      "image": "/img/banners/hw_logo_small.png",
+      "bgimg": "/img/foundation.webp",
       "id": "1",
       "collections": [
         {
