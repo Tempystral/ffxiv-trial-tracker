@@ -26,17 +26,32 @@ export interface Duty {
   id: number;
   type: string;
   image: string;
-  objectives: Array<{ name: string; completed: boolean }>;
+  objectives: Array<ObjectiveType>;
+  rewards: Array<RewardType>;
 }
+
+export type ObjectiveType = { name: string; completed: boolean };
+export type RewardType = {
+  name: string;
+  item: string;
+  collected: boolean;
+  objective: Objective;
+};
 
 export enum Objective {
   NORMAL = "normal",
-  SAVAGE = "savage",
-  ROLL = "orchestrion roll",
+  SAVAGE = "savage"
+}
+
+export enum Reward {
+  FADEDROLL = "fadedroll",
+  ROLL = "orchroll",
   MOUNT = "mount",
   MINION = "minion",
-  CARD = "triple triad card",
+  CARD = "ttcard",
   ACHEIVEMENT = "achievement"
 }
 
-export type UserData = Array<Pick<Duty, "id" | "type" | "objectives">>;
+export type UserData = Array<
+  Pick<Duty, "id" | "type" | "objectives" | "rewards">
+>;
