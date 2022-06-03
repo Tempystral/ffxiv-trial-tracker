@@ -46,3 +46,47 @@ else if collection.dutyType == 'allianceraid'
 					.column.is-6-fullhd.is-4-widescreen.is-4-desktop.is-4-tablet
 						Trial(:dutyType='collection.dutyType', :duty='duty')
 </template>
+
+<style lang="scss">
+@use "@/assets/sass/mixins" as *;
+
+.group-title {
+	font-family: "Jupiter Pro Regular";
+	@include bevel($gold-fill, $gold-shadow, white);
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+.column:not([duty-type="special"]) {
+	.duty-group {
+		@include metal-border;
+		background: #08084e9f;
+	}
+}
+
+.raid-set-title-container {
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	border: {
+		style: ridge;
+		width: 4px;
+		radius: 2em;
+		color: #dedede #c5c5c5;
+		top: none;
+		left: none;
+		bottom: none;
+	}
+
+	.raid-set-title {
+		font-family: "Jupiter Pro Regular";
+		@include bevel($gold-fill, $gold-shadow, white);
+		-webkit-font-smoothing: subpixel-antialiased;
+		writing-mode: vertical-lr;
+		transform: rotate(180deg);
+	}
+}
+</style>

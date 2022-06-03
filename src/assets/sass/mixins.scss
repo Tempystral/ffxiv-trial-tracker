@@ -21,6 +21,12 @@ $silver-shadow: #4b4b4b;
     url("@/assets/font/EurostileRegular.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Eurostile Bold";
+  src: url("@/assets/font/EurostileBold.woff2") format("woff2"),
+    url("@/assets/font/EurostileBold.woff") format("woff");
+}
+
 @mixin vcenter {
   display: flex;
   flex-direction: column;

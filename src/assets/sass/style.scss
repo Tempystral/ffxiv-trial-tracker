@@ -1,83 +1,56 @@
 @charset "utf-8";
 @use "../node_modules/bulma/bulma.sass" as b;
 @use "animations" as *;
-@use "variables" as *;
+@use "mixins" as *;
 @use "theme" as *;
 @use "modal" as *;
 
-.view {
-  background-image: url("../img/Aether.png");
-}
+// .column {
+//   &[duty-type="special"] {
+//     //@include vcenter;
+//     background: {
+//       repeat: no-repeat;
+//       size: contain;
+//       position: {
+//         x: center;
+//         y: top;
+//       }
+//     }
+//     //flex: 1 1 0;
 
-#settingsButton {
-  position: absolute;
-  right: 0;
-  background: none;
-  border: none;
-  transition: all 0.1s ease-in-out;
-  &:hover {
-    transform: scale(0.95);
-  }
-  cursor: pointer;
-}
+//     .duty-group {
+//       //@include vcenter;
+//       flex-grow: inherit;
+//       z-index: 0;
+//       background-color: rgba(0, 0, 0, 0);
+//       position: relative; /* Required so the absolute pos of
+//       the :after has a reference to latch onto */
 
-.column {
-  &[duty-type="special"] {
-    //@include vcenter;
-    background: {
-      repeat: no-repeat;
-      size: contain;
-      position: {
-        x: center;
-        y: top;
-      }
-    }
-    //flex: 1 1 0;
-
-    .duty-group {
-      //@include vcenter;
-      flex-grow: inherit;
-      z-index: 0;
-      background-color: rgba(0, 0, 0, 0);
-      position: relative; /* Required so the absolute pos of
-      the :after has a reference to latch onto */
-
-      &:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0%;
-        right: 0%;
-        left: 0%;
-        height: 100%;
-        background: {
-          image: url("../img/tornpaper.png");
-          color: rgba(0, 0, 0, 0);
-          position: center bottom;
-          repeat: no-repeat;
-          size: cover;
-        }
-        mask: linear-gradient(0deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
-        -webkit-mask: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 1) 50%,
-          rgba(0, 0, 0, 0) 90%
-        );
-      }
-    }
-  }
-
-  &:not([duty-type="special"]) {
-    .duty-group {
-      @include metal-border;
-      background: #08084e9f;
-    }
-  }
-}
-
-.fill-element {
-  @include fill-element;
-}
+//       &:after {
+//         content: "";
+//         position: absolute;
+//         z-index: -1;
+//         top: 0%;
+//         right: 0%;
+//         left: 0%;
+//         height: 100%;
+//         background: {
+//           image: url("../img/tornpaper.png");
+//           color: rgba(0, 0, 0, 0);
+//           position: center bottom;
+//           repeat: no-repeat;
+//           size: cover;
+//         }
+//         mask: linear-gradient(0deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
+//         -webkit-mask: linear-gradient(
+//           0deg,
+//           rgba(0, 0, 0, 1) 50%,
+//           rgba(0, 0, 0, 0) 90%
+//         );
+//       }
+//     }
+//   }
+// }
 
 .duty {
   height: 100%; // Fix to make column content full-height
@@ -89,42 +62,41 @@
   overflow: clip;
   cursor: pointer;
 
+  // Animation
+  transition: all 0.1s ease-in-out;
+  // &:hover {
+  //   transform: scale(1.05);
+  // }
+
   // Theme
   @include metal-border;
 
-  .duty-title {
-    font-family: "Jupiter Pro Regular";
-    @include bevel($silver-fill, $silver-shadow, white);
-  }
-  .duty-content {
-    font: {
-      family: "Eurostile Regular";
-      size: 1.2em;
+  &.card {
+    display: flex;
+    flex-direction: column;
+    div.is-relative {
+      flex-grow: 100;
+    }
+    .duty-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font: {
+        family: "Eurostile Regular";
+        size: 1.2em;
+      }
+    }
+    // Image
+    .duty-image .image img {
+      border-radius: 1em 1em 0 0;
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0)
+      );
     }
   }
 
-  .complete img {
-    transition: all 0.5s ease;
-    -webkit-filter: grayscale(100%) brightness(100%);
-    filter: grayscale(100%) brightness(100%);
-    //opacity: 0.6;
-  }
-
-  // Animation
-  transition: all 0.1s ease-in-out;
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  // Image
-  .duty-image .image img {
-    border-radius: 1em 1em 0 0;
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 0)
-    );
-  }
   &.raid {
     padding: 0;
     position: relative;
@@ -132,69 +104,70 @@
       padding-block-start: b.$box-padding;
       padding-block-end: b.$box-padding;
     }
-    .raid-image .image {
-      img {
+    .raid-content-title-container {
+      background-image: linear-gradient(to bottom, black 50%, transparent);
+      position: absolute;
+      //height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      text-align: center;
+      text-shadow: #000000;
+    }
+
+    .raid-image {
+      position: relative;
+      .image {
+        img {
+          height: 100%;
+        }
         height: 100%;
+        border-radius: 0 1em 1em 0;
+        // -webkit-mask-image: linear-gradient(
+        //   to left,
+        //   rgba(0, 0, 0, 1) 80%,
+        //   rgba(0, 0, 0, 0)
+        // );
       }
-      height: 100%;
-      border-radius: 0 1em 1em 0;
-      -webkit-mask-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 1) 80%,
-        rgba(0, 0, 0, 0)
-      );
     }
   }
-}
-
-.X {
-  max-height: 100%;
-  width: auto;
-}
-
-.raid-set-title-container {
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: {
-    style: ridge;
-    width: 4px;
-    radius: 2em;
-    color: #dedede #c5c5c5;
-    top: none;
-    left: none;
-    bottom: none;
+  .complete img {
+    transition: all 0.5s ease;
+    -webkit-filter: grayscale(100%) brightness(100%);
+    filter: grayscale(100%) brightness(100%);
+  }
+  .duty-title {
+    font-family: "Jupiter Pro Regular";
+    @include bevel($silver-fill, $silver-shadow, white);
+    justify-content: center;
   }
 }
 
-.raid-set-title {
-  font-family: "Jupiter Pro Regular";
-  @include bevel($gold-fill, $gold-shadow, white);
-  -webkit-font-smoothing: subpixel-antialiased;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
+.reward {
+  overflow: clip;
 }
 
-#heading,
-.group-title {
-  font-family: "Jupiter Pro Regular";
-  @include bevel($gold-fill, $gold-shadow, white);
-  -webkit-font-smoothing: subpixel-antialiased;
+.objective-container,
+.reward-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .image {
+    overflow: clip;
+  }
+  h5 {
+    font-family: "Eurostile Regular";
+  }
 }
 
 .shine {
   @include shine;
 }
+.fill-element {
+  @include fill-element;
+}
 
-.objective-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  .image {
-    overflow: clip;
-  }
+.X {
+  max-height: 100%;
+  width: auto;
 }

@@ -21,3 +21,23 @@ const props = defineProps<{
       each collection in exp.collections
         DutyContainer(:collection="collection")
 </template>
+
+<style lang="scss">
+.view {
+  background-image: url("@/assets/img/Aether.png");
+}
+
+#settingsButton {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  cursor: pointer;
+}
+</style>
