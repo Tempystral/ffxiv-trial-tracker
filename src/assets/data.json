@@ -302,12 +302,22 @@
               ],
               "rewards": [
                 {
-                  "name": "orchroll",
-                  "collected": false
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Hubris"
                 },
                 {
-                  "name": "orchroll",
-                  "collected": false
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Tumbling Down"
+                },
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Phlegethon"
                 }
               ]
             },
@@ -324,20 +334,34 @@
               ],
               "rewards": [
                 {
-                  "name": "orchroll",
-                  "collected": false
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Xande"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Now I Know the Truth"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Out of the Labyrinth"
                 },
                 {
                   "name": "orchroll",
-                  "collected": false
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Shattered"
                 },
                 {
                   "name": "minion",
-                  "collected": false
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Wind-up Onion Knight"
                 }
               ]
             },
@@ -354,24 +378,34 @@
               ],
               "rewards": [
                 {
-                  "name": "orchroll",
-                  "collected": false
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Blind to the Dark"
                 },
                 {
-                  "name": "orchroll",
-                  "collected": false
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Hunger"
                 },
                 {
                   "name": "minion",
-                  "collected": false
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Puff of Darkness"
                 },
                 {
                   "name": "ttcard",
-                  "collected": false
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Onion Knight"
                 },
                 {
                   "name": "ttcard",
-                  "collected": false
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Cloud of Darkness"
                 }
               ]
             }
