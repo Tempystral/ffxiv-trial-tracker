@@ -1,9 +1,12 @@
 @charset "utf-8";
-@use "../node_modules/bulma/bulma.sass" as b;
+@use "variables" as *;
+@use "../node_modules/bulma/bulma.sass" as *;
 @use "animations" as *;
 @use "mixins" as *;
 @use "theme" as *;
 @use "modal" as *;
+
+@import "@creativebulma/bulma-tooltip";
 
 // .column {
 //   &[duty-type="special"] {
@@ -59,7 +62,6 @@
   background-image: url("../img/canvas.jpg");
   background-size: cover;
   background-position: center center;
-  overflow: clip;
   cursor: pointer;
 
   // Animation
@@ -101,8 +103,8 @@
     padding: 0;
     position: relative;
     .raid-content > div {
-      padding-block-start: b.$box-padding;
-      padding-block-end: b.$box-padding;
+      padding-block-start: $box-padding;
+      padding-block-end: $box-padding;
     }
     .raid-content-title-container {
       background-image: linear-gradient(to bottom, black 50%, transparent);
@@ -152,12 +154,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  .image {
-    overflow: clip;
-  }
   h5 {
     font-family: "Eurostile Regular";
   }
+}
+
+.shine-target {
+  @include fill-element;
+  overflow: clip;
+  pointer-events: none;
+}
+
+.tooltip-target {
+  @include fill-element;
+  top: -100%;
+  pointer-events: all;
 }
 
 .shine {

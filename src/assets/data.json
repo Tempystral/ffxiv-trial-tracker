@@ -136,16 +136,16 @@
               ],
               "rewards": [
                 {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Good King Moggle Mog XII "
+                },
+                {
                   "name": "ttcard",
                   "collected": false,
                   "objective": "normal",
                   "item": "Good King Moggle Mog XII"
-                },
-                {
-                  "name": "fadedroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Good King Moggle Mog XII&nbsp"
                 }
               ]
             },
