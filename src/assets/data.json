@@ -932,7 +932,7 @@
                       "name": "minion",
                       "collected": false,
                       "item": "Faustlet",
-                      "objective": "normal"
+                      "objective": "savage"
                     },
                     {
                       "name": "ttcard",
@@ -1027,7 +1027,19 @@
                       "name": "mount",
                       "collected": false,
                       "item": "Arrhidaeus",
-                      "objective": "normal"
+                      "objective": "savage"
+                    },
+                    {
+                      "name": "minion",
+                      "collected": false,
+                      "item": "Toy Alexander",
+                      "objective": "savage"
+                    },
+                    {
+                      "name": "ttcard",
+                      "collected": false,
+                      "item": "Alexander Prime",
+                      "objective": "savage"
                     }
                   ]
                 }

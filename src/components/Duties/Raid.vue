@@ -3,7 +3,7 @@ import localforage from "localforage";
 import { ref, toRef } from "vue";
 import { useStore } from "../../ts/store";
 import { Objective, type RewardType, type Duty } from "../../types";
-import { getFullRewardName, getRewardImg } from "../../ts/util";
+import { getFullRewardName, getRewardImg, getObjectiveImg } from "../../ts/util";
 
 const props = defineProps<{
 	dutyType: string,
@@ -12,13 +12,13 @@ const props = defineProps<{
 
 const store = useStore();
 const elemToShine = ref("");
+const rewards = ref({ "normal": [] as Array<RewardType>, "savage": [] as Array<RewardType> });
 // Set up reward slices
-const rewards = toRef(props, "duty").value.rewards || null
-let normalRewards: Array<RewardType> = [];
-let savageRewards: Array<RewardType> = [];
-if (rewards != null) {
-	normalRewards = rewards.filter(r => { return r.objective == "normal" })
-	savageRewards = rewards.filter(r => { return r.objective == "savage" })
+if (props.duty.rewards != null) {
+	rewards.value = {
+		"normal": props.duty.rewards.filter(r => { return r.objective == "normal" }) || null,
+		"savage": props.duty.rewards.filter(r => { return r.objective == "savage" }) || null
+	}
 }
 
 function markDuty(obj: string) {
@@ -39,46 +39,59 @@ function shimmer(obj: string) {
 }
 const isShining = (str: string) => { return elemToShine.value === str }
 function getRaidSet(diff: string) { return props.duty.rewards.find(r => { r.name == diff }) }
-
+function hasRewards(str: string) { return rewards.value[str as keyof object] && (rewards.value[str as keyof object] as Array<RewardType>).length }
 </script>
 
 <template lang='pug'>
 .duty.raid.tile.is-child.box(:id="dutyType + '-' + duty.id")
-	.columns.is-gapless.is-multiline()
-		.column.is-2.reward-container
-			for reward in normalRewards
-				.reward.image.is-48x48(@click="markReward(reward)" :data-tooltip="getFullRewardName(reward)")
-					img(:src='getRewardImg(reward.name)')
-					.fill-element(v-if='store.isRewardCollected(duty, reward)')
-						img.X(src="/assets/img/X.png")
-					div.shine-target( :class='{ "shine shine-anim": isShining(reward.item) }')
-
-		.column.is-2.objective-container
-			for obj in duty.objectives
-				.level.mb-0(@click='markDuty(obj.name)')
-					.level-left
-						.level-item.image.is-48x48
-							img(:src='`/assets/img/icon/duty_raid_${obj.name}.png`')
-							.fill-element(v-if='store.isObjectiveComplete(duty, obj.name)')
-								img.X(src="/assets/img/X.png")
-							div.shine-target( :class='{ "shine shine-anim": isShining(obj.name) }')
-						.level-item
-							h5.mb-0 #{obj.name.toLocaleUpperCase()}
-
-		.raid-content.column.is-3
-			//- .raid-content-title-container
-			//- 	.duty-title.title.is-5 #{duty.name}
-			//- .duty-content.is-flex.is-flex-direction-row
-			//- 	for obj in duty.objectives
-			//- 		.image.is-48x48(@click='markDuty(obj.name)' :class='{ "shine shine-anim": elemToShine === obj.name }')
-			//- 			img(:src='`/assets/img/icon/duty_raid_${obj.name}.png`')
-			//- 			.fill-element(v-if='store.isObjectiveComplete(duty, obj.name)')
-			//- 				img.X(src="/assets/img/X.png")
-
+	.columns.is-gapless.is-multiline
 		.raid-image.column.is-5
 			.image.is-fullwidth( :class='{ "complete": store.areObjectivesComplete(duty, Objective.NORMAL, Objective.SAVAGE) }' )
 				img(:src='duty.image')
 			.raid-content-title-container
 				.duty-title.title.is-4 #{duty.name}
-	//- div.shine-target(:class='{ "shine shine-anim": isShining(duty.name) }')
+			div.shine-target(:class='{ "shine shine-anim": isShining(duty.name) }')
+
+		.raid-content.column.is-7
+			.columns.is-gapless.is-centered
+				for obj in duty.objectives
+					.column.is-half(:class='{"is-justify-content-center": !hasRewards(obj.name), "is-justify-content-space-evenly": hasRewards(obj.name) }')
+						.level.mb-0.is-justify-content-center(@click='markDuty(obj.name)')
+							.level-left.click-target
+								.level-item
+									.image.is-48x48
+										img(:src='getObjectiveImg(obj.name)')
+										.fill-element(v-if='store.isObjectiveComplete(duty, obj.name)')
+											img.X(src="/assets/img/X.png")
+										div.shine-target( :class='{ "shine shine-anim": isShining(obj.name) }')
+								.level-item
+									h5.mb-0 #{obj.name.toLocaleUpperCase()}
+						hr(v-if='hasRewards(obj.name)')
+						.level
+							for reward in rewards[obj.name]
+								.level-item
+									.reward.image.is-48x48(@click="markReward(reward)" :data-tooltip="getFullRewardName(reward)")
+										img(:src='getRewardImg(reward.name)')
+										.fill-element(v-if='store.isRewardCollected(duty, reward)')
+											img.X(src="/assets/img/X.png")
+										div.shine-target( :class='{ "shine shine-anim": isShining(reward.item) }')
+
+		
 </template>
+
+<style lang="scss">
+hr {
+	margin: initial;
+	position: relative;
+	left: 2%;
+	width: 96%;
+	border: 0;
+	height: 1px;
+	background: none;
+	background-image: linear-gradient(to right,
+			#ccc,
+			#333 30%,
+			#333 70%,
+			#ccc 100%);
+}
+</style>

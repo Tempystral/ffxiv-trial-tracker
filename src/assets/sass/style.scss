@@ -62,7 +62,6 @@
   background-image: url("../img/canvas.jpg");
   background-size: cover;
   background-position: center center;
-  cursor: pointer;
 
   // Animation
   transition: all 0.1s ease-in-out;
@@ -72,6 +71,17 @@
 
   // Theme
   @include metal-border;
+
+  .complete img {
+    transition: all 0.5s ease;
+    -webkit-filter: grayscale(100%) brightness(100%);
+    filter: grayscale(100%) brightness(100%);
+  }
+  .duty-title {
+    font-family: "Jupiter Pro Regular";
+    @include bevel($silver-fill, $silver-shadow, white);
+    justify-content: center;
+  }
 
   &.card {
     display: flex;
@@ -83,10 +93,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      font: {
-        family: "Eurostile Regular";
-        size: 1.2em;
-      }
+      font-family: "Eurostile Regular";
     }
     // Image
     .duty-image .image img {
@@ -102,9 +109,14 @@
   &.raid {
     padding: 0;
     position: relative;
-    .raid-content > div {
-      padding-block-start: $box-padding;
-      padding-block-end: $box-padding;
+    font-family: "Eurostile Regular";
+    .raid-content > .columns {
+      height: 100%;
+      .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
     }
     .raid-content-title-container {
       background-image: linear-gradient(to bottom, black 50%, transparent);
@@ -133,16 +145,6 @@
         // );
       }
     }
-  }
-  .complete img {
-    transition: all 0.5s ease;
-    -webkit-filter: grayscale(100%) brightness(100%);
-    filter: grayscale(100%) brightness(100%);
-  }
-  .duty-title {
-    font-family: "Jupiter Pro Regular";
-    @include bevel($silver-fill, $silver-shadow, white);
-    justify-content: center;
   }
 }
 
@@ -182,4 +184,8 @@
 .X {
   max-height: 100%;
   width: auto;
+}
+
+.click-target {
+  cursor: pointer;
 }

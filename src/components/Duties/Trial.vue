@@ -38,7 +38,7 @@ const isShining = (str: string) => { return elemToShine.value === str }
 
 <template lang='pug'>
 .duty.card.has-text-centered(:id="dutyType + '-' + duty.id")
-	div.is-relative(@click='markDuty')
+	div.is-relative.click-target(@click='markDuty')
 		.duty-image.card-image( :class='{ "complete": store.isObjectiveComplete(duty, Objective.NORMAL) }' )
 			.image.is-3by1
 				img(:src="duty.image")
