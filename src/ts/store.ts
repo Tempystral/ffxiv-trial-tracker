@@ -16,7 +16,7 @@ export const useStore = defineStore("dutyStore", {
       };
     },
     areObjectivesComplete() {
-      return (duty: Duty, ...names: Array<string>) => {
+      return (duty: Duty, names: Array<string>) => {
         return names.every((name) => {
           return this.isObjectiveComplete(duty, name);
         });

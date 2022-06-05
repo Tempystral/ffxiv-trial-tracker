@@ -46,7 +46,7 @@ function hasRewards(str: string) { return rewards.value[str as keyof object] && 
 .duty.raid.tile.is-child.box(:id="dutyType + '-' + duty.id")
 	.columns.is-gapless.is-multiline
 		.raid-image.column.is-5
-			.image.is-fullwidth( :class='{ "complete": store.areObjectivesComplete(duty, Objective.NORMAL, Objective.SAVAGE) }' )
+			.image.is-fullwidth( :class='{ "complete": store.areObjectivesComplete(duty, duty.objectives.map(o => o.name)) }' )
 				img(:src='duty.image')
 			.raid-content-title-container
 				.duty-title.title.is-4 #{duty.name}
