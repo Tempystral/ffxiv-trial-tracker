@@ -845,16 +845,16 @@
                   "item": "Sophia"
                 },
                 {
-                  "name": "ttcard",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Sophic Lanner"
-                },
-                {
                   "name": "fadedroll",
                   "collected": false,
                   "objective": "normal",
                   "item": "Equilibrium"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Sophic Lanner"
                 }
               ]
             },
@@ -877,16 +877,16 @@
                   "item": "Zurvan"
                 },
                 {
-                  "name": "ttcard",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Demonic Lanner"
-                },
-                {
                   "name": "fadedroll",
                   "collected": false,
                   "objective": "normal",
                   "item": "Infinity"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Demonic Lanner"
                 }
               ]
             }

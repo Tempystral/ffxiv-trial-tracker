@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import { Accordion } from '../ts/accordion';
 import { useStore } from '../ts/store';
 
 
@@ -36,6 +37,11 @@ function reset() {
 	}
 }
 
+onMounted(() => {
+	document.querySelectorAll("details.modalDetail").forEach((el) => {
+		new Accordion(el as HTMLDetailsElement, "p");
+	});
+});
 
 </script>
 <!-- The onClick calls closeModal() which emits signal "close" -->
@@ -45,7 +51,7 @@ function reset() {
 	.modal-card
 		header.modal-card-head
 			p.modal-card-title Settings
-			button.is-medium.delete(aria-label="close" @click="closeModal")
+			button#modalClose.is-medium.delete(aria-label='Close' @click="closeModal")
 		hr
 		section.modal-card-body 
 			//- .box
@@ -57,7 +63,7 @@ function reset() {
 					.level-item
 						button.button.is-danger(@click="reset") #{resetText}
 			.box
-				details
+				details.modalDetail
 					summary Credits
 					p Credits 
 		footer.modal-card-foot.is-block
