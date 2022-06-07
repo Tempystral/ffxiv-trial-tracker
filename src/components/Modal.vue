@@ -56,12 +56,13 @@ onMounted(() => {
 		section.modal-card-body 
 			//- .box
 				p Theme 
-			.box.level
-				.level-left
-					.level-item
-						p Click here to reset all settings: 
-					.level-item
-						button.button.is-danger(@click="reset") #{resetText}
+			.box
+				.level
+					.level-left
+						.level-item
+							p Click here to reset all settings: 
+						.level-item
+							button.button.is-danger(@click="reset") #{resetText}
 			.box
 				details.modalDetail
 					summary Credits

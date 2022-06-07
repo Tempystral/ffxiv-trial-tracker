@@ -7,6 +7,7 @@ export class Accordion {
   summary: HTMLElement;
   content: any;
   animation: Animation | null;
+  duration: number;
   isClosing: boolean;
   isExpanding: boolean;
 
@@ -16,7 +17,7 @@ export class Accordion {
     if (sum == null) throw new Error("Could not find summary object!");
     this.summary = sum;
     this.content = el.querySelector(contentSelector);
-
+    this.duration = this.el.offsetHeight / 3;
     this.animation = null;
     this.isClosing = false;
     this.isExpanding = false;
@@ -47,8 +48,6 @@ export class Accordion {
     const endHeight = `${
       this.summary.offsetHeight + this.getMarginBottom(this.summary)
     }px`;
-    console.log(startHeight);
-    console.log(endHeight);
 
     if (this.animation) {
       this.animation.cancel();
@@ -61,7 +60,7 @@ export class Accordion {
         height: [startHeight, endHeight]
       },
       {
-        duration: 400,
+        duration: this.duration,
         easing: "ease-out"
       }
     );
@@ -93,7 +92,7 @@ export class Accordion {
         height: [startHeight, endHeight]
       },
       {
-        duration: 400,
+        duration: this.duration,
         easing: "ease-out"
       }
     );

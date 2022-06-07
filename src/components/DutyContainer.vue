@@ -3,7 +3,7 @@ import { type Collection } from '../types';
 import Raid from './Duties/Raid.vue';
 import Trial from './Duties/Trial.vue';
 import { Accordion } from "../ts/accordion";
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 defineProps<{
 	collection: Collection
@@ -14,8 +14,6 @@ onMounted(() => {
 		new Accordion(el as HTMLDetailsElement, ".duty-group");
 	});
 });
-
-
 </script>
 
 <template lang='pug'>
@@ -99,6 +97,52 @@ else if collection.dutyType == 'allianceraid'
 		-webkit-font-smoothing: subpixel-antialiased;
 		writing-mode: vertical-lr;
 		transform: rotate(180deg);
+	}
+}
+
+details:not(.modalDetail) {
+	summary {
+		list-style: none;
+		cursor: pointer;
+
+		&::marker {
+			display: none;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			display: inline-block;
+			background-image: url("@/assets/img/Arrow.png");
+			background-repeat: no-repeat;
+			width: 46px;
+			height: 46px;
+			transform-origin: 50% 50%;
+			transition: .25s transform ease;
+		}
+
+		&::after {
+			transform: rotate(180deg);
+		}
+	}
+
+	&[open] summary::before,
+	&[open] summary::after {
+		transform: rotate(90deg);
+	}
+}
+
+.arrow-shine {
+	animation: arrow-shine .5s steps(4) 1;
+}
+
+@keyframes arrow-shine {
+	from {
+		background-position: 0px;
+	}
+
+	to {
+		background-position: -184px;
 	}
 }
 </style>
