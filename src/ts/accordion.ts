@@ -111,7 +111,6 @@ export class Accordion {
     this.isExpanding = false;
     // Remove the overflow hidden and the fixed height
     this.el.style.height = this.el.style.overflow = "";
-    this.el.removeAttribute("data-clicked");
   }
 
   getMarginBottom(el: HTMLElement): number {
