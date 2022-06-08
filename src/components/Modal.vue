@@ -65,14 +65,16 @@ onMounted(() => {
 					.level-item
 						label.checkbox
 							input(type="checkbox", name="spoilermode" v-model='prefs.spoilermode' ).mr-2
-							| Hide duty groups (default: true)
+							| Spoiler mode
+					.level-item
+						p (Hide duty groups you haven't opened)
 
-			.box
 				.level: .level-left
 					.level-item
-						p Click here to reset all data: 
-					.level-item
 						button.button.is-danger(@click="reset") #{resetText}
+					.level-item
+						p Click here to reset all data
+
 			.box
 				details.modalDetail
 					summary Credits
