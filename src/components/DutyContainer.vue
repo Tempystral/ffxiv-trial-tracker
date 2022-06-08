@@ -17,7 +17,9 @@ const prefs = usePrefStore()
 function setOpen(e: Event, str: string) {
 	e.preventDefault();
 	const details = e.currentTarget as HTMLDetailsElement;
-	prefs.setDetailState(str, details.open);
+	if (details.getAttribute("data-clicked") === "true") {
+		prefs.setDetailState(str, details.open);
+	}
 }
 
 onBeforeMount(() => {

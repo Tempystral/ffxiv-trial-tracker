@@ -29,6 +29,7 @@ export class Accordion {
   onClick(e: Event) {
     // Stop default behaviour from the browser
     e.preventDefault();
+    this.el.setAttribute("data-clicked", "true"); // Add attribute when clicked only
     // Add an overflow on the <details> to avoid content overflowing
     this.el.style.overflow = "hidden";
     if (this.isClosing || !this.el.open) {
@@ -110,6 +111,7 @@ export class Accordion {
     this.isExpanding = false;
     // Remove the overflow hidden and the fixed height
     this.el.style.height = this.el.style.overflow = "";
+    this.el.removeAttribute("data-clicked");
   }
 
   getMarginBottom(el: HTMLElement): number {
