@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@creativebulma/bulma-tooltip": "^1.2.0",
     "brushstroke": "github:lmgonzalves/brushstroke",
     "bulma": "^0.9.4",
     "localforage": "^1.10.0",

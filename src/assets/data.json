@@ -19,6 +19,32 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ifrit"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Primal Judgement"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Aithon"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Nightmare"
+                }
               ]
             },
             {
@@ -30,6 +56,32 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Titan"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Under the Weight"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Gullfaxi"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Nightmare"
                 }
               ]
             },
@@ -43,6 +95,32 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Garuda"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Fallen Angel"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Xanthos"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Nightmare"
+                }
               ]
             },
             {
@@ -54,6 +132,20 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Good King Moggle Mog XII "
+                },
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Good King Moggle Mog XII"
                 }
               ]
             },
@@ -67,6 +159,20 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ultima Weapon"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Maker's Ruin"
+                }
               ]
             },
             {
@@ -78,6 +184,32 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Leviathan"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Wreck to the Seaman"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Through the Maelstrom"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Enbarr"
                 }
               ]
             },
@@ -91,6 +223,26 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ramuh"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Thunder Rolls"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Markab"
+                }
               ]
             },
             {
@@ -102,6 +254,32 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Shiva"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Footsteps in the Snow"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Oblivion"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Boreas"
                 }
               ]
             }
@@ -121,6 +299,26 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Hubris"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Tumbling Down"
+                },
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Phlegethon"
+                }
               ]
             },
             {
@@ -133,6 +331,38 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Xande"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Now I Know the Truth"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Out of the Labyrinth"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Shattered"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Wind-up Onion Knight"
+                }
               ]
             },
             {
@@ -144,6 +374,38 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Blind to the Dark"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Hunger"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Puff of Darkness"
+                },
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Onion Knight"
+                },
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Cloud of Darkness"
                 }
               ]
             }
@@ -214,6 +476,14 @@
                       "name": "normal",
                       "completed": false
                     }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "fadedroll",
+                      "collected": false,
+                      "item": "Thunderer",
+                      "objective": "normal"
+                    }
                   ]
                 }
               ]
@@ -283,6 +553,20 @@
                       "name": "savage",
                       "completed": false
                     }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "fadedroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Rise of the White Raven"
+                    },
+                    {
+                      "name": "fadedroll",
+                      "collected": false,
+                      "objective": "savage",
+                      "item": "Rise of the White Raven"
+                    }
                   ]
                 }
               ]
@@ -324,6 +608,14 @@
                       "name": "normal",
                       "completed": false
                     }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "fadedroll",
+                      "collected": false,
+                      "item": "From the Ashes",
+                      "objective": "normal"
+                    }
                   ]
                 },
                 {
@@ -335,6 +627,14 @@
                     {
                       "name": "normal",
                       "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "fadedroll",
+                      "collected": false,
+                      "item": "Answers",
+                      "objective": "normal"
                     }
                   ]
                 }
@@ -364,6 +664,32 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ravana"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Hand That Gives the Rose"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Unbending Steel"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Rose Lanner"
+                }
               ]
             },
             {
@@ -375,6 +701,32 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Bismarck"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Limitless Blue"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Woe That Is Madness"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "White Lanner"
                 }
               ]
             },
@@ -388,6 +740,26 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Archbishop Thordan VII"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Heroes"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Round Lanner"
+                }
               ]
             },
             {
@@ -399,6 +771,26 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Sephirot"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Fiend"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Warring Lanner"
                 }
               ]
             },
@@ -412,6 +804,26 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Nidhogg"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Horde"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Dark Lanner"
+                }
               ]
             },
             {
@@ -423,6 +835,26 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Sophia"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Equilibrium"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Sophic Lanner"
                 }
               ]
             },
@@ -436,12 +868,32 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Zurvan"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Infinity"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Demonic Lanner"
+                }
               ]
             }
           ]
         },
         {
-          "title": "Alliance Raids",
+          "title": "Shadow of Mhach",
           "dutyType": "allianceraid",
           "duties": [
             {
@@ -453,6 +905,20 @@
                 {
                   "name": "normal",
                   "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Echidna"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Wind-up Echidna"
                 }
               ]
             },
@@ -466,6 +932,20 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Calofisteri"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Wind-up Calofisteri"
+                }
               ]
             },
             {
@@ -478,16 +958,30 @@
                   "name": "normal",
                   "completed": false
                 }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Diablos Hollow"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Wind-up Scathach"
+                }
               ]
             }
           ]
         },
         {
-          "title": "Raids",
+          "title": "Alexander",
           "dutyType": "raid",
           "duties": [
             {
-              "raidset": "Raid Set",
+              "raidset": "Gordius",
               "raids": [
                 {
                   "name": "Alexander - The Fist of the Father",
@@ -556,7 +1050,7 @@
               ]
             },
             {
-              "raidset": "Raid Set",
+              "raidset": "Midas",
               "raids": [
                 {
                   "name": "Alexander - The Fist of the Son",
@@ -620,12 +1114,32 @@
                       "name": "savage",
                       "completed": false
                     }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "ttcard",
+                      "collected": false,
+                      "item": "Brute Justice",
+                      "objective": "normal"
+                    },
+                    {
+                      "name": "minion",
+                      "collected": false,
+                      "item": "Faustlet",
+                      "objective": "savage"
+                    },
+                    {
+                      "name": "ttcard",
+                      "collected": false,
+                      "item": "Brute Justice",
+                      "objective": "savage"
+                    }
                   ]
                 }
               ]
             },
             {
-              "raidset": "Raid Set",
+              "raidset": "The Creator",
               "raids": [
                 {
                   "name": "Alexander - The Eyes of the Creator",
@@ -688,6 +1202,38 @@
                     {
                       "name": "savage",
                       "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "minion",
+                      "collected": false,
+                      "item": "Toy Alexander",
+                      "objective": "normal"
+                    },
+                    {
+                      "name": "ttcard",
+                      "collected": false,
+                      "item": "Alexander Prime",
+                      "objective": "normal"
+                    },
+                    {
+                      "name": "mount",
+                      "collected": false,
+                      "item": "Arrhidaeus",
+                      "objective": "savage"
+                    },
+                    {
+                      "name": "minion",
+                      "collected": false,
+                      "item": "Toy Alexander",
+                      "objective": "savage"
+                    },
+                    {
+                      "name": "ttcard",
+                      "collected": false,
+                      "item": "Alexander Prime",
+                      "objective": "savage"
                     }
                   ]
                 }

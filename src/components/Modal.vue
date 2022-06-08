@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useStore } from '../ts/store';
+import { onMounted, ref } from 'vue';
+import { Accordion } from '../ts/accordion';
+import { useDutyStore } from '../store/DutyStore';
+import { usePrefStore } from '../store/PrefStore';
 
 
 defineProps<{
@@ -9,7 +11,9 @@ defineProps<{
 
 const resetText = ref("Reset");
 const resetConfirm = ref(false);
-const store = useStore();
+
+const store = useDutyStore();
+const prefs = usePrefStore();
 
 // These are the signals the modal can output for other components to listen to
 const emit = defineEmits([
@@ -30,12 +34,18 @@ function reset() {
 	}
 	else if (resetConfirm.value) {
 		resetText.value = "Data reset";
-		store.$state = { duties: [] };
+		store.$reset();
+		prefs.$reset();
 		console.log("Data reset");
 		emit("reset");
 	}
 }
 
+onMounted(() => {
+	document.querySelectorAll("details.modalDetail").forEach((el) => {
+		new Accordion(el as HTMLDetailsElement, "p");
+	});
+});
 
 </script>
 <!-- The onClick calls closeModal() which emits signal "close" -->
@@ -45,21 +55,29 @@ function reset() {
 	.modal-card
 		header.modal-card-head
 			p.modal-card-title Settings
-			button.is-medium.delete(aria-label="close" @click="closeModal")
+			button#modalClose.is-medium.delete(aria-label='Close' @click="closeModal")
 		hr
 		section.modal-card-body 
 			//- .box
 				p Theme 
-			.box.level
-				.level-left
+			.box
+				.level: .level-left
 					.level-item
-						p Click here to reset all settings: 
+						label.checkbox
+							input(type="checkbox", name="spoilermode" v-model='prefs.spoilermode' ).mr-2
+							| Hide duty groups (default: true)
+
+			.box
+				.level: .level-left
+					.level-item
+						p Click here to reset all data: 
 					.level-item
 						button.button.is-danger(@click="reset") #{resetText}
 			.box
-				details
+				details.modalDetail
 					summary Credits
-					p Credits 
+					p Credits
+
 		footer.modal-card-foot.is-block
 			.level
 				.level-left
@@ -67,3 +85,64 @@ function reset() {
 						p.subtitle.is-5 © Tempystral #{new Date().getFullYear()}
 
 </template>
+
+<style lang="scss">
+@use "@/assets/sass/mixins" as *;
+
+.modal-card {
+	// &:before {
+	//   @include fill-element;
+	//   // border-style: solid;
+	//   // border-image-source: url("/assets/img/theme/frame_lodestone.png");
+	//   // border-image-slice: 25%;
+	//   // border-image-width: 3em;
+	//   // border-radius: 1em;
+	//   @include gold-border;
+	//   z-index: 1;
+	// }
+
+	@include gold-border;
+	@include contained-bg;
+	background-image: linear-gradient(#565759 0%, #2f2f2c 20%);
+
+	p,
+	label,
+	summary {
+		font-family: "Eurostile Regular", Arial, Helvetica, sans-serif;
+		color: white;
+	}
+
+	.box {
+		//background-image: linear-gradient(#565759 0%, #2f2f2c 20%);
+		background: #202020;
+
+		p,
+		label,
+		summary {
+			font-size: 1.1em;
+		}
+	}
+
+	.modal-card-head,
+	.modal-card-body,
+	.modal-card-foot {
+		border: none;
+		background: none;
+	}
+
+	hr {
+		margin: initial;
+		position: relative;
+		left: 2%;
+		width: 96%;
+		border: 0;
+		height: 1px;
+		background: #333;
+		background-image: linear-gradient(to right,
+				#333,
+				#ccc 30%,
+				#ccc 70%,
+				#333 100%);
+	}
+}
+</style>

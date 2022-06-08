@@ -1,11 +1,11 @@
 import localforage from "localforage";
-import { type UserData } from "../types";
+import { Reward, type RewardType, type UserData } from "../types";
 
 type Result =
   | { success: true; value: unknown }
   | { success: false; error: Error };
 
-export async function getLocalForageSafe(key: string): Promise<Result> {
+async function getLocalForageSafe(key: string): Promise<Result> {
   const item = await localforage.getItem(key);
 
   if (item === null) {
@@ -45,4 +45,43 @@ const isUserData = (obj: unknown): obj is UserData => {
     })
   );
 };
-export { isUserData };
+
+function getFullRewardName(reward: RewardType): string {
+  let ret = "";
+
+  switch (reward.name) {
+    case Reward.ROLL:
+      ret = `${reward.item} Orchestrion Roll`;
+      break;
+    case Reward.FADEDROLL:
+      ret = `Faded Copy of ${reward.item}`;
+      break;
+    case Reward.CARD:
+      ret = `${reward.item} Card`;
+      break;
+    default:
+      ret = reward.item;
+      break;
+  }
+  return ret;
+}
+
+const reward_img_glob = import.meta.globEager("@/assets/img/icon/reward_*.png");
+function getRewardImg(reward: string) {
+  return reward_img_glob[`../assets/img/icon/reward_${reward}.png`].default;
+}
+
+const duty_img_glob = import.meta.globEager(
+  "@/assets/img/icon/duty_raid_*.png"
+);
+function getObjectiveImg(duty: string) {
+  return duty_img_glob[`../assets/img/icon/duty_raid_${duty}.png`].default;
+}
+
+export {
+  isUserData,
+  getFullRewardName,
+  getLocalForageSafe,
+  getRewardImg,
+  getObjectiveImg
+};
