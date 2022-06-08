@@ -19,6 +19,7 @@ function setOpen(e: Event, str: string) {
 	const details = e.currentTarget as HTMLDetailsElement;
 	if (details.getAttribute("data-clicked") === "true") {
 		prefs.setDetailState(str, details.open);
+		details.removeAttribute("data-clicked");
 	}
 }
 
