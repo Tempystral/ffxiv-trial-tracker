@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import { ref } from "vue";
-import { useStore } from "../../ts/store";
+import { useDutyStore } from '../../store/DutyStore'
 import { Objective, type RewardType, type Duty } from "../../types";
 import { getFullRewardName, getRewardImg } from "../../ts/util";
 
@@ -9,7 +9,7 @@ const props = defineProps<{
 	duty: Duty
 }>()
 
-const store = useStore();
+const store = useDutyStore();
 const elemToShine = ref("");
 const animating = ref(false);
 

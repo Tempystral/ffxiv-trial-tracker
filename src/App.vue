@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import Modal from '/components/Modal.vue';
 import localforage from 'localforage';
-import { useStore } from './ts/store';
+import { useDutyStore } from './store/DutyStore';
 import { getLocalForageSafe, isUserData } from './ts/util';
 
 // Ensure localforage is set up before anything else
@@ -11,7 +11,7 @@ localforage.config({
 	storeName: "ffxivtracker"
 });
 
-const store = useStore();
+const store = useDutyStore();
 // Load data
 getLocalForageSafe("duties").then(res => {
 	if (res.success == true) {
@@ -52,5 +52,5 @@ Modal(:show='showModal' @close="toggleModal")
 </template>
 
 <style lang="scss">
-@use "/assets/sass/style.scss"as *;
+@use "/assets/sass/style.scss" as *;
 </style>

@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { type UserData, type Duty, RewardType } from "../types";
 
-export const useStore = defineStore("dutyStore", {
+export const useDutyStore = defineStore("dutyStore", {
   state: () => ({
     duties: [] as UserData
   }),

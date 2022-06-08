@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { Accordion } from '../ts/accordion';
-import { useStore } from '../ts/store';
+import { useDutyStore } from '../store/DutyStore';
 
 
 defineProps<{
@@ -10,7 +10,7 @@ defineProps<{
 
 const resetText = ref("Reset");
 const resetConfirm = ref(false);
-const store = useStore();
+const store = useDutyStore();
 
 // These are the signals the modal can output for other components to listen to
 const emit = defineEmits([

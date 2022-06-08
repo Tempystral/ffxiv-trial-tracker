@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 import localforage from "localforage";
 import { ref, toRef } from "vue";
-import { useStore } from "../../ts/store";
+import { useDutyStore } from '../../store/DutyStore'
 import { Objective, type RewardType, type Duty } from "../../types";
 import { getFullRewardName, getRewardImg, getObjectiveImg } from "../../ts/util";
 
@@ -10,7 +10,7 @@ const props = defineProps<{
 	duty: Duty
 }>()
 
-const store = useStore();
+const store = useDutyStore();
 const elemToShine = ref("");
 const rewards = ref({ "normal": [] as Array<RewardType>, "savage": [] as Array<RewardType> });
 // Set up reward slices
