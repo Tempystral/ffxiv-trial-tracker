@@ -3,11 +3,31 @@ import { type Collection } from '../types';
 import Raid from './Duties/Raid.vue';
 import Trial from './Duties/Trial.vue';
 import { Accordion } from "../ts/accordion";
-import { onMounted, ref } from 'vue';
+import { computed, onActivated, onBeforeMount, onMounted, ref } from 'vue';
+import { usePrefStore } from "../store/PrefStore";
+import { getLocalForageSafe } from '../ts/util';
+import localforage from 'localforage';
 
-defineProps<{
+const props = defineProps<{
 	collection: Collection
 }>()
+
+const prefs = usePrefStore()
+
+function setOpen(e: Event, str: string) {
+	e.preventDefault();
+	const details = e.currentTarget as HTMLDetailsElement;
+	prefs.setDetailState(str, details.open);
+}
+
+onBeforeMount(() => {
+	// Load data
+	prefs.loadState();
+	// Subscribe to state changes
+	prefs.$subscribe((_, state) => {
+		localforage.setItem("preferences", JSON.stringify(state));
+	});
+})
 
 onMounted(() => {
 	document.querySelectorAll("details.dutyDetail").forEach((el) => {
@@ -17,20 +37,22 @@ onMounted(() => {
 </script>
 
 <template lang='pug'>
+mixin detail
+	details(:open='prefs.isOpen(collection.title)' @toggle='setOpen($event, collection.title)').dutyDetail
+		summary.group-title.title.is-2.has-text-centered #{collection.title}
+		block
+
 if collection.dutyType == 'raid'
-	div.column.is-2-fullhd.is-1-widescreen.is-0
+	.column.is-2-fullhd.is-1-widescreen.is-0
 	.column.is-8-fullhd.is-10-widescreen.is-12-desktop.is-12-tablet
-		details(open=true).dutyDetail
-			summary.group-title.title.is-2.has-text-centered #{collection.title}
+		+detail
 			.duty-group.box.tile.is-ancestor.m-0
 				.group-content.tile.is-vertical
 					each duty in collection.duties
 						.raid-set-container.tile.is-12
 							.tile.is-parent.is-vertical.is-1
 								.raid-set-title-container.tile.is-child.box
-									//- img(src=`/assets/img/gold-trim-top.png`)
 									.raid-set-title.title.is-3 #{duty.raidset}
-									//- img(src=`/assets/img/gold-trim-bottom.png`)
 							.tile.is-parent.is-vertical.is-11
 								each raid in duty.raids
 									Raid(:dutyType='collection.dutyType', :duty='raid')
@@ -38,8 +60,7 @@ if collection.dutyType == 'raid'
 
 else if collection.dutyType == 'trial'
 	.column.is-8-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet
-		details(open=true).dutyDetail
-			summary.group-title.title.is-2.has-text-centered #{collection.title}
+		+detail
 			.duty-group.box
 				.group-content.columns.is-multiline
 					each duty in collection.duties
@@ -48,8 +69,7 @@ else if collection.dutyType == 'trial'
 
 else if collection.dutyType == 'allianceraid'
 	.column.is-4-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet
-		details(open=true).dutyDetail
-			summary.group-title.title.is-2.has-text-centered #{collection.title}
+		+detail
 			.duty-group.box
 				.group-content.columns.is-multiline.is-centered
 					each duty in collection.duties

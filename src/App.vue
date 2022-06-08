@@ -18,7 +18,7 @@ getLocalForageSafe("duties").then(res => {
 		const data = res.value as { duties: object };
 		if (isUserData(data.duties)) {
 			store.$state.duties = data.duties;
-			console.log(store.$state.duties);
+			//console.log(store.$state.duties);
 		}
 	}
 	else {

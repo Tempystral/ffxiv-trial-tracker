@@ -17,7 +17,7 @@ export class Accordion {
     if (sum == null) throw new Error("Could not find summary object!");
     this.summary = sum;
     this.content = el.querySelector(contentSelector);
-    this.duration = this.el.offsetHeight / 3;
+    this.duration = 400;
     this.animation = null;
     this.isClosing = false;
     this.isExpanding = false;
