@@ -80,7 +80,9 @@ export class Accordion {
     this.isExpanding = true;
     const startHeight = `${this.el.offsetHeight}px`;
     const endHeight = `${
-      this.summary.offsetHeight + this.content.offsetHeight
+      this.summary.offsetHeight +
+      this.content.offsetHeight +
+      this.getMarginBottom(this.summary)
     }px`;
 
     if (this.animation) {
