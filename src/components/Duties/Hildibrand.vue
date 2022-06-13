@@ -17,21 +17,24 @@ const elemToStamp = ref("");
 const animating = ref(false);
 
 function markDuty() {
-	if (!isRevealed()) {
-		spoil();
-	}
-	else {
+
+	if (isRevealed()) {
 		store.markDone(props.duty, Objective.NORMAL)
 		console.log(`Marked duty ${props.duty.id} as done`)
 		stamp(props.duty)
 	}
-
+	spoil();
 }
 
 function markReward(reward: RewardType) {
-	store.markCollected(props.duty, reward)
-	console.log(`Marked duty ${props.duty.name}, ${reward.item} as collected`)
-	shimmer(reward.item)
+
+	if (isRevealed()) {
+		store.markCollected(props.duty, reward)
+		console.log(`Marked duty ${props.duty.name}, ${reward.item} as collected`)
+		shimmer(reward.item)
+	}
+	spoil();
+
 }
 
 function shimmer(obj: string) {
