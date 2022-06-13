@@ -52,3 +52,38 @@
     left: 60%;
   }
 }
+
+.stamp {
+  content: "";
+  z-index: 1;
+  background-image: url("/assets/img/caseclosed.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  animation-name: stamp-anim;
+  animation-delay: 0s;
+  animation-duration: 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes stamp-anim {
+  0% {
+    opacity: 0;
+    transform: scale(3);
+  }
+  10% {
+    opacity: 0.5;
+    transform: scale(3);
+    transition: all 0.3s cubic-bezier(0.44, 0.14, 0.83, 0.22);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -2,6 +2,7 @@
 import { type Collection } from '../types';
 import Raid from './Duties/Raid.vue';
 import Trial from './Duties/Trial.vue';
+import Hildibrand from './Duties/Hildibrand.vue';
 import { Accordion } from "../ts/accordion";
 import { computed, onActivated, onBeforeMount, onMounted, ref } from 'vue';
 import { usePrefStore } from "../store/PrefStore";
@@ -37,6 +38,7 @@ onMounted(() => {
 		new Accordion(el as HTMLDetailsElement, ".duty-group");
 	});
 });
+
 </script>
 
 <template lang='pug'>
@@ -46,7 +48,6 @@ mixin detail
 		block
 
 if collection.dutyType == 'raid'
-	.column.is-2-fullhd.is-1-widescreen.is-0
 	.column.is-8-fullhd.is-10-widescreen.is-12-desktop.is-12-tablet
 		+detail
 			.duty-group.box.tile.is-ancestor.m-0
@@ -59,10 +60,9 @@ if collection.dutyType == 'raid'
 							.tile.is-parent.is-vertical.is-11
 								each raid in duty.raids
 									Raid(:dutyType='collection.dutyType', :duty='raid')
-	.column.is-2-fullhd.is-1-widescreen.is-0
 
 else if collection.dutyType == 'trial'
-	.column.is-8-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet
+	.column.is-10-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet
 		+detail
 			.duty-group.box
 				.group-content.columns.is-multiline
@@ -71,13 +71,23 @@ else if collection.dutyType == 'trial'
 							Trial(:dutyType='collection.dutyType', :duty='duty')
 
 else if collection.dutyType == 'allianceraid'
-	.column.is-4-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet
+	.column.is-8-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet
 		+detail
 			.duty-group.box
 				.group-content.columns.is-multiline.is-centered
 					each duty in collection.duties
-						.column.is-6-fullhd.is-4-widescreen.is-4-desktop.is-4-tablet
+						.column.is-4-fullhd.is-4-widescreen.is-4-desktop.is-4-tablet
 							Trial(:dutyType='collection.dutyType', :duty='duty')
+
+else if collection.dutyType == 'special'
+	.column.is-10-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet(:data-dutyType='collection.dutyType' :data-collection='collection.title')
+		+detail
+			.duty-group.box
+				.group-content.columns.is-multiline.is-centered
+					each duty in collection.duties
+						.column.is-3-fullhd.is-3-widescreen.is-3-desktop.is-4-tablet
+							Hildibrand(:dutyType="collection.dutyType", :duty="duty")
+				
 </template>
 
 <style lang="scss">
@@ -89,11 +99,55 @@ else if collection.dutyType == 'allianceraid'
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
-.column:not([duty-type="special"]) {
+.column:not([data-dutytype="special"]) {
 	.duty-group {
 		@include metal-border;
 		background: #08084e9f;
 	}
+}
+
+.column[data-dutytype="special"] {
+	.box {
+		background: none;
+		box-shadow: none;
+	}
+
+	&[data-collection="Inspector Hildibrand"] {
+		.duty-group {
+			position: relative;
+			display: grid;
+			background-color: black;
+			background-image: url("@/assets/img/special/hildibrand_bg_narrow.png");
+			background-size: contain;
+			background-position: center bottom;
+			background-repeat: no-repeat;
+
+			&::before {
+				content: "";
+				height: 5em;
+			}
+
+			&::after {
+				content: "";
+				height: 20em;
+			}
+
+			clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0 100%);
+
+			.group-content {}
+		}
+	}
+
+	// .duty-group {
+	// 	background-image: "";
+	// 	background-size: contain;
+	// 	background-repeat: no-repeat;
+	// 	border-style: "";
+	// 	border-image-source: "";
+	// 	border-image-slice: 20%;
+	// 	border-image-width: 35px;
+	// 	border-image-outset: 5px;
+	// }
 }
 
 .raid-set-title-container {

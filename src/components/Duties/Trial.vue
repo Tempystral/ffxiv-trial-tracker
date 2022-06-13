@@ -56,3 +56,31 @@ const isShining = (str: string) => { return elemToShine.value === str }
 					div.shine-target( :class='{ "shine shine-anim": isShining(reward.item) }')
 	div.shine-target(:class='{ "shine shine-anim": isShining(duty.name) }')
 </template>
+<style scoped lang="scss">
+@use "@/assets/sass/style" as *;
+@use "@/assets/sass/mixins" as *;
+
+.card {
+	display: flex;
+	flex-direction: column;
+
+	div.is-relative {
+		flex-grow: 100;
+	}
+
+	.duty-content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		font-family: "Eurostile Regular";
+	}
+
+	// Image
+	.duty-image .image img {
+		border-radius: 1em 1em 0 0;
+		-webkit-mask-image: linear-gradient(to bottom,
+				rgba(0, 0, 0, 1) 50%,
+				rgba(0, 0, 0, 0));
+	}
+}
+</style>
