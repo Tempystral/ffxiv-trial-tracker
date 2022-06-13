@@ -54,10 +54,10 @@ export const usePrefStore = defineStore("prefStore", {
             spoiledDuties: Array<SpoilerState>;
             firstVisit: boolean;
           };
-          this.details = data.details;
-          this.spoilermode = data.spoilermode;
-          this.spoiledDuties = data.spoiledDuties;
-          this.firstVisit = data.firstVisit;
+          this.details = data.details || [];
+          this.spoilermode = data.spoilermode || this.$state.spoilermode;
+          this.spoiledDuties = data.spoiledDuties || [];
+          this.firstVisit = data.firstVisit || this.$state.firstVisit;
         } else {
           console.log(res.error);
         }
