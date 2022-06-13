@@ -16,7 +16,7 @@ const props = defineProps<{
     figure.image
       img(:src='exp.image')
   .content.tile.is-parent
-    .columns.is-multiline
+    .columns.is-multiline.is-centered
       //- Collection of duty groups
       each collection in exp.collections
         DutyContainer(:collection="collection")

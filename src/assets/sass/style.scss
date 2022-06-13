@@ -7,142 +7,34 @@
 
 @import "@creativebulma/bulma-tooltip";
 
-// .column {
-//   &[duty-type="special"] {
-//     //@include vcenter;
-//     background: {
-//       repeat: no-repeat;
-//       size: contain;
-//       position: {
-//         x: center;
-//         y: top;
-//       }
-//     }
-//     //flex: 1 1 0;
-
-//     .duty-group {
-//       //@include vcenter;
-//       flex-grow: inherit;
-//       z-index: 0;
-//       background-color: rgba(0, 0, 0, 0);
-//       position: relative; /* Required so the absolute pos of
-//       the :after has a reference to latch onto */
-
-//       &:after {
-//         content: "";
-//         position: absolute;
-//         z-index: -1;
-//         top: 0%;
-//         right: 0%;
-//         left: 0%;
-//         height: 100%;
-//         background: {
-//           image: url("../img/tornpaper.png");
-//           color: rgba(0, 0, 0, 0);
-//           position: center bottom;
-//           repeat: no-repeat;
-//           size: cover;
-//         }
-//         mask: linear-gradient(0deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
-//         -webkit-mask: linear-gradient(
-//           0deg,
-//           rgba(0, 0, 0, 1) 50%,
-//           rgba(0, 0, 0, 0) 90%
-//         );
-//       }
-//     }
-//   }
-// }
-
 .duty {
-  height: 100%; // Fix to make column content full-height
-  // Background
-  @include contained-bg;
-  background-image: url("../img/canvas.jpg");
-  background-size: cover;
-  background-position: center center;
-
-  // Animation
-  transition: all 0.1s ease-in-out;
-  // &:hover {
-  //   transform: scale(1.05);
-  // }
-
-  // Theme
-  @include metal-border;
-
   .complete img {
     transition: all 0.5s ease;
     -webkit-filter: grayscale(100%) brightness(100%);
     filter: grayscale(100%) brightness(100%);
   }
-  .duty-title {
-    font-family: "Jupiter Pro Regular";
-    @include bevel($silver-fill, $silver-shadow, white);
-    justify-content: center;
-  }
 
-  &.card {
-    display: flex;
-    flex-direction: column;
-    div.is-relative {
-      flex-grow: 100;
-    }
-    .duty-content {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      font-family: "Eurostile Regular";
-    }
-    // Image
-    .duty-image .image img {
-      border-radius: 1em 1em 0 0;
-      -webkit-mask-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 1) 50%,
-        rgba(0, 0, 0, 0)
-      );
-    }
-  }
+  &:not([data-dutytype="special"]) {
+    height: 100%; // Fix to make column content full-height
+    // Background
+    @include contained-bg;
+    background-image: url("@/assets/img/canvas.jpg");
+    background-size: cover;
+    background-position: center center;
 
-  &.raid {
-    padding: 0;
-    position: relative;
-    font-family: "Eurostile Regular";
-    .raid-content > .columns {
-      height: 100%;
-      .column {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-      }
-    }
-    .raid-content-title-container {
-      background-image: linear-gradient(to bottom, black 50%, transparent);
-      position: absolute;
-      //height: 100%;
-      top: 0;
-      right: 0;
-      z-index: 1;
-      text-align: center;
-      text-shadow: #000000;
-      border-radius: 0.6em;
-    }
+    // Animation
+    transition: all 0.1s ease-in-out;
+    // &:hover {
+    //   transform: scale(1.05);
+    // }
 
-    .raid-image {
-      position: relative;
-      .image {
-        img {
-          height: 100%;
-        }
-        height: 100%;
-        border-radius: 0 1em 1em 0;
-        // -webkit-mask-image: linear-gradient(
-        //   to left,
-        //   rgba(0, 0, 0, 1) 80%,
-        //   rgba(0, 0, 0, 0)
-        // );
-      }
+    // Theme
+    @include metal-border;
+
+    .duty-title {
+      font-family: "Jupiter Pro Regular";
+      @include bevel($silver-fill, $silver-shadow, white);
+      justify-content: center;
     }
   }
 }
@@ -161,7 +53,8 @@
   }
 }
 
-.shine-target {
+.shine-target,
+.stamp-target {
   @include fill-element;
   overflow: clip;
   pointer-events: none;
@@ -187,4 +80,8 @@
 
 .click-target {
   cursor: pointer;
+}
+
+.classified {
+  -webkit-filter: grayscale(100%) brightness(0%);
 }

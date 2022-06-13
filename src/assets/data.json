@@ -10,6 +10,32 @@
           "dutyType": "trial",
           "duties": [
             {
+              "name": "Urth's Fount",
+              "id": 82,
+              "type": "special",
+              "image": "https://xivapi.com/i/112000/112065.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Odin"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Corpse Hall"
+                }
+              ]
+            },
+            {
               "name": "the Bowl of Embers (Extreme)",
               "id": 63,
               "type": "trial",
@@ -280,6 +306,102 @@
                   "collected": false,
                   "objective": "normal",
                   "item": "Boreas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Inspector Hildibrand",
+          "dutyType": "special",
+          "duties": [
+            {
+              "name": "Battle on the Big Bridge",
+              "id": 20021,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112054.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Gilgamesh & Enkidu"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Battle on the Big Bridge "
+                }
+              ]
+            },
+            {
+              "name": "The Dragon's Neck",
+              "id": 20026,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112075.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ultros & Typhon"
+                },
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Terra Branford"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Wind-up Ultros"
+                }
+              ]
+            },
+            {
+              "name": "Battle in the Big Keep",
+              "id": 20030,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112080.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Bartz Klauser"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Battle on the Big Bridge"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Enkidu"
                 }
               ]
             }
