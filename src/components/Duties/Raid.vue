@@ -79,7 +79,53 @@ function hasRewards(str: string) { return rewards.value[str as keyof object] && 
 		
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
+.raid {
+	padding: 0;
+	position: relative;
+	font-family: "Eurostile Regular";
+
+	.raid-content>.columns {
+		height: 100%;
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+		}
+	}
+
+	.raid-content-title-container {
+		background-image: linear-gradient(to bottom, black 50%, transparent);
+		position: absolute;
+		//height: 100%;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		text-align: center;
+		text-shadow: #000000;
+		border-radius: 0.6em;
+	}
+
+	.raid-image {
+		position: relative;
+
+		.image {
+			img {
+				height: 100%;
+			}
+
+			height: 100%;
+			border-radius: 0 1em 1em 0;
+			// -webkit-mask-image: linear-gradient(
+			//   to left,
+			//   rgba(0, 0, 0, 1) 80%,
+			//   rgba(0, 0, 0, 0)
+			// );
+		}
+	}
+}
+
 hr {
 	margin: initial;
 	position: relative;
