@@ -6,7 +6,7 @@
       "id": "0",
       "collections": [
         {
-          "title": "High-End Trials (A Realm Reborn)",
+          "title": "Extreme Trials",
           "dutyType": "trial",
           "duties": [
             {
@@ -773,7 +773,7 @@
       "id": "1",
       "collections": [
         {
-          "title": "High-End Trials (Heavensward)",
+          "title": "Extreme Trials",
           "dutyType": "trial",
           "duties": [
             {
@@ -1367,11 +1367,11 @@
     },
     {
       "name": "Stormblood",
-      "image": "/img/banners/sb_banner.webp",
+      "image": "/img/banners/sb_logo_resized.png",
       "id": "2",
       "collections": [
         {
-          "title": "Extreme Trials (Stormblood)",
+          "title": "Extreme Trials",
           "dutyType": "trial",
           "duties": [
             {
