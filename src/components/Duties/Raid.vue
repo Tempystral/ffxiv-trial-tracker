@@ -98,7 +98,7 @@ function hasRewards(str: string) { return rewards.value[str as keyof object] && 
 	.raid-content-title-container {
 		background-image: linear-gradient(to bottom, black 50%, transparent);
 		position: absolute;
-		//height: 100%;
+		width: 100%;
 		top: 0;
 		right: 0;
 		z-index: 1;

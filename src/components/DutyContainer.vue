@@ -194,18 +194,22 @@ details:not(.modalDetail) {
 			background-repeat: no-repeat;
 			width: 46px;
 			height: 46px;
-			transform-origin: 50% 50%;
 			transition: .25s transform ease;
 		}
 
 		&::after {
-			transform: rotate(180deg);
+			transform: rotate(180deg) translateY(-10%);
+			// transform-origin: 50% 60%;
+		}
+
+		&::before {
+			transform: translateY(10%);
 		}
 	}
 
 	&[open] summary::before,
 	&[open] summary::after {
-		transform: rotate(90deg);
+		transform: rotate(90deg) translateX(10%);
 	}
 }
 
