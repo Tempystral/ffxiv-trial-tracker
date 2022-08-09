@@ -7,6 +7,23 @@
 
 @import "@creativebulma/bulma-tooltip";
 
+html,
+body {
+  height: 100%;
+  background: black;
+  overflow-y: unset;
+}
+
+.spacer {
+  height: 20px;
+  &#top-spacer {
+    background-image: linear-gradient(to top, transparent, black);
+  }
+  &#bottom-spacer {
+    background-image: linear-gradient(to bottom, transparent, black);
+  }
+}
+
 .duty {
   .complete img {
     transition: all 0.5s ease;

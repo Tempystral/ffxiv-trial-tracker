@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-import * as gamedata from "../assets/data.json";
+import gamedata from "../assets/data.json";
 import Expansion from "../components/Expansion.vue";
 
 const props = defineProps<{
@@ -12,6 +12,6 @@ const props = defineProps<{
 
 <template lang="pug">
 
-Expansion( :exp="gamedata.expansions[parseInt(exp)]" )
-
+if true
+	Expansion( :exp="gamedata.expansions[parseInt(exp)]")
 </template>

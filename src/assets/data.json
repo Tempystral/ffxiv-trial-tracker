@@ -6,7 +6,7 @@
       "id": "0",
       "collections": [
         {
-          "title": "Extreme Trials",
+          "title": "Extreme Trials (A Realm Reborn)",
           "dutyType": "trial",
           "duties": [
             {
@@ -769,11 +769,11 @@
     {
       "name": "Heavensward",
       "image": "/img/banners/hw_logo_small.png",
-      "bgimg": "/img/foundation.webp",
+      "bgimg": "/img/bg/heavensward.webp",
       "id": "1",
       "collections": [
         {
-          "title": "Extreme Trials",
+          "title": "Extreme Trials (Heavensward)",
           "dutyType": "trial",
           "duties": [
             {
@@ -1371,7 +1371,7 @@
       "id": "2",
       "collections": [
         {
-          "title": "Extreme Trials",
+          "title": "Extreme Trials (Stormblood)",
           "dutyType": "trial",
           "duties": [
             {

@@ -1,8 +1,8 @@
 export type GameData = {
-  expansions: Array<Expansion>;
+  expansions: Array<ExpansionType>;
 };
 
-export type Expansion = {
+export type ExpansionType = {
   name: string;
   image: string;
   id: string | number;

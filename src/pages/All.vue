@@ -6,5 +6,5 @@ import Expansion from "../components/Expansion.vue";
 
 <template lang="pug" #default>
 each expansion in gamedata.expansions
-	Expansion( :exp="gamedata.expansions[expansion.id]" )
+	Expansion( :exp="gamedata.expansions[expansion.id]")
 </template>
