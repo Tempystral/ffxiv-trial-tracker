@@ -34,12 +34,14 @@ $silver-shadow: #4b4b4b;
 }
 
 @mixin bevel($text-color, $bevel-color, $highlight-color) {
-  -webkit-text-stroke: 0.005em $highlight-color;
+  @supports (-moz-appearance: none) {
+    // Support only Firefox for this one
+    -webkit-text-stroke: 0.005em $highlight-color;
+  }
   -webkit-text-fill-color: transparent;
   color: rgba($text-color, 1);
   text-shadow: -0.04em 0.04em 0.03em $bevel-color, 0 0 0 $highlight-color,
     0 0.04em 0.02em $text-color, 0em 0.1em 0.3em black;
-
   position: relative;
   z-index: 0;
 }

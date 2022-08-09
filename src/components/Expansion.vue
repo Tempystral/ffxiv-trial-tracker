@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { type Expansion } from '../types';
+import { type ExpansionType } from '../types';
 import DutyContainer from "./DutyContainer.vue"
 
 const props = defineProps<{
-  exp: Expansion
+  exp: ExpansionType,
+  last: { default: false, type: boolean },
 }>()
 
 </script>
 
 <template lang="pug">
-.view
-  //- (style=`background-image: url(${exp.bgimg})`)
+.view( :data-expansion="exp.name" )
+  .spacer#top-spacer
   .container.is-max-desktop
     figure.image
       img(:src='exp.image')
@@ -20,13 +21,10 @@ const props = defineProps<{
       //- Collection of duty groups
       each collection in exp.collections
         DutyContainer(:collection="collection")
+  .spacer#bottom-spacer
 </template>
 
 <style lang="scss">
-.view {
-  background-image: url("@/assets/img/Aether.png");
-}
-
 #settingsButton {
   position: absolute;
   right: 0;
@@ -39,5 +37,19 @@ const props = defineProps<{
   }
 
   cursor: pointer;
+}
+
+.view {
+  &[data-expansion="A Realm Reborn"] {
+    background-image: url("@/assets/img/bg/Aether.png");
+  }
+
+  &[data-expansion="Heavensward"] {
+    background-image: url("@/assets/img/bg/heavensward.webp");
+  }
+
+  &[data-expansion="Stormblood"] {
+    background-image: url("@/assets/img/bg/stormblood.webp");
+  }
 }
 </style>
