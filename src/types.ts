@@ -49,7 +49,8 @@ export enum Reward {
   MOUNT = "mount",
   MINION = "minion",
   CARD = "ttcard",
-  ACHEIVEMENT = "achievement"
+  ACHEIVEMENT = "achievement",
+  HAIRSTYLE = "hairstyle"
 }
 
 export type UserData = Array<

@@ -769,7 +769,6 @@
     {
       "name": "Heavensward",
       "image": "/img/banners/hw_logo_small.png",
-      "bgimg": "/img/bg/heavensward.webp",
       "id": "1",
       "collections": [
         {
@@ -1633,6 +1632,156 @@
           ]
         },
         {
+          "title": "The Return to Ivalice",
+          "dutyType": "allianceraid",
+          "duties": [
+            {
+              "name": "the Royal City of Rabanastre",
+              "id": 281,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112256.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Rofocale"
+                },
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Argath Thadalfus"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Trisection"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Precipitous Combat"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ultima's Transformation"
+                }
+              ]
+            },
+            {
+              "name": "the Ridorana Lighthouse",
+              "id": 550,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112286.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Yiazmaat"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Apoplexy"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Mystery of Giruvegan"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Flash of Steel"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Construct 8"
+                }
+              ]
+            },
+            {
+              "name": "the Orbonne Monastery",
+              "id": 636,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112334.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ultima, the High Seraph"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "A Man Consumed"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Antipyretic"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Under the Stars"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ultima's Perfection"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Pressure (No. 1)"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Wind-up Ramza"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "Omegascape",
           "dutyType": "raid",
           "duties": [
@@ -1904,16 +2053,273 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Shadowbringers",
+      "image": "/img/banners/shb_logo_resized.png",
+      "id": "3",
+      "collections": [
+        {
+          "title": "High-End Trials (Shadowbringers)",
+          "dutyType": "trial",
+          "duties": [
+            {
+              "name": "the Dancing Plague (Extreme)",
+              "id": 658,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112359.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Titania"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Fae Gwiber"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "What Angel Wakes Me"
+                }
+              ]
+            },
+            {
+              "name": "the Crown of the Immaculate (Extreme)",
+              "id": 667,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112361.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Innocence"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Innocent Gwiber"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Insanity"
+                }
+              ]
+            },
+            {
+              "name": "The Minstrel's Ballad: Hades's Elegy",
+              "id": 693,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112372.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Hades"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Shadow Gwiber"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Invincible"
+                }
+              ]
+            },
+            {
+              "name": "the Seat of Sacrifice (Extreme)",
+              "id": 739,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112403.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Warrior of Light"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Gwiber of Light"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "To the Edge"
+                }
+              ]
+            },
+            {
+              "name": "Memoria Misera (Extreme)",
+              "id": 725,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112381.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Varis yae Galvus"
+                }
+              ]
+            },
+            {
+              "name": "Cinder Drift (Extreme)",
+              "id": 718,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112380.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ruby Weapon"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ruby Gwiber"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Ultima"
+                }
+              ]
+            },
+            {
+              "name": "Castrum Marinum (Extreme)",
+              "id": 763,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112420.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Emerald Weapon"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Emerald Gwiber"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Black Wolf Stalks Again"
+                }
+              ]
+            },
+            {
+              "name": "The Cloud Deck (Extreme)",
+              "id": 782,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112430.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Diamond Weapon"
+                },
+                {
+                  "name": "mount",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Diamond Gwiber"
+                },
+                {
+                  "name": "fadedroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "In the Arms of War"
+                }
+              ]
+            }
+          ]
         },
         {
-          "title": "The Return to Ivalice",
+          "title": "YoRHa: Dark Apocalypse",
           "dutyType": "allianceraid",
           "duties": [
             {
-              "name": "the Royal City of Rabanastre",
-              "id": 281,
+              "name": "The Copied Factory",
+              "id": 700,
               "type": "trial",
-              "image": "https://xivapi.com/i/112000/112256.png",
+              "image": "https://xivapi.com/i/112000/112375.png",
               "objectives": [
                 {
                   "name": "normal",
@@ -1925,83 +2331,57 @@
                   "name": "ttcard",
                   "collected": false,
                   "objective": "normal",
-                  "item": "Rofocale"
-                },
-                {
-                  "name": "ttcard",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Argath Thadalfus"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Trisection"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Precipitous Combat"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Ultima's Transformation"
-                }
-              ]
-            },
-            {
-              "name": "the Ridorana Lighthouse",
-              "id": 550,
-              "type": "trial",
-              "image": "https://xivapi.com/i/112000/112286.png",
-              "objectives": [
-                {
-                  "name": "normal",
-                  "completed": false
-                }
-              ],
-              "rewards": [
-                {
-                  "name": "ttcard",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Yiazmaat"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Apoplexy"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "The Mystery of Giruvegan"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Flash of Steel"
+                  "item": "9S"
                 },
                 {
                   "name": "minion",
                   "collected": false,
                   "objective": "normal",
-                  "item": "Construct 8"
+                  "item": "Pod 054"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Pod 316"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Bipolar Nightmare"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "City Ruins (Rays of Light)"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Song of Ancients (Atonement)"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Weight of the World (Prelude Version)"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Alien Manifestation"
                 }
               ]
             },
             {
-              "name": "the Orbonne Monastery",
-              "id": 636,
+              "name": "the Puppets' Bunker",
+              "id": 736,
               "type": "trial",
-              "image": "https://xivapi.com/i/112000/112334.png",
+              "image": "https://xivapi.com/i/112000/112400.png",
               "objectives": [
                 {
                   "name": "normal",
@@ -2013,43 +2393,470 @@
                   "name": "ttcard",
                   "collected": false,
                   "objective": "normal",
-                  "item": "Ultima, the High Seraph"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "A Man Consumed"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Antipyretic"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Under the Stars"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Ultima's Perfection"
-                },
-                {
-                  "name": "orchroll",
-                  "collected": false,
-                  "objective": "normal",
-                  "item": "Pressure (No. 1)"
+                  "item": "2P"
                 },
                 {
                   "name": "minion",
                   "collected": false,
                   "objective": "normal",
-                  "item": "Wind-up Ramza"
+                  "item": "2B Automaton"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "2P Automaton"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "End of the Unknown"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Fortress of Lies"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Grandma (Destruction)"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Torn from the Heavens-The Dark Colossus Destroys All (Medley Version)"
+                }
+              ]
+            },
+            {
+              "name": "The Tower at Paradigm's Breach",
+              "id": 779,
+              "type": "trial",
+              "image": "https://xivapi.com/i/112000/112431.png",
+              "objectives": [
+                {
+                  "name": "normal",
+                  "completed": false
+                }
+              ],
+              "rewards": [
+                {
+                  "name": "ttcard",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "2B"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "9S Automaton"
+                },
+                {
+                  "name": "minion",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Smaller Stubby"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Sound of the End"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Emil (Despair)"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Kainé (Final Fantasy Main Theme Version)"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Mourning"
+                },
+                {
+                  "name": "orchroll",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "The Sound of the End: 8bit"
+                },
+                {
+                  "name": "hairstyle",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Battle-Ready Bobs"
+                },
+                {
+                  "name": "hairstyle",
+                  "collected": false,
+                  "objective": "normal",
+                  "item": "Scanning for Style"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Eden",
+          "dutyType": "raid",
+          "duties": [
+            {
+              "raidset": "Eden's Gate",
+              "raids": [
+                {
+                  "name": "Eden's Gate: Resurrection",
+                  "id": 653,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112350.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Force Your Way"
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Gate: Descent",
+                  "id": 684,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112352.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Force Your Way"
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Gate: Inundation",
+                  "id": 682,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112354.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Blinding Indigo"
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Gate: Sepulture",
+                  "id": 689,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112356.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Landslide"
+                    },
+                    {
+                      "name": "minion",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Eden Minor"
+                    },
+                    {
+                      "name": "mount",
+                      "collected": false,
+                      "objective": "savage",
+                      "item": "Skyslipper"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "raidset": "Eden's Verse",
+              "raids": [
+                {
+                  "name": "Eden's Verse: Fulmination",
+                  "id": 715,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112385.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Twice Stricken"
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Verse: Furor",
+                  "id": 719,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112387.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Primal Angel"
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Verse: Iconoclasm",
+                  "id": 726,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112389.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Verse: Refulgence",
+                  "id": 728,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112391.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Return to Oblivion"
+                    },
+                    {
+                      "name": "minion",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Wind-up Ryne"
+                    },
+                    {
+                      "name": "mount",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Ramuh Crystal"
+                    },
+                    {
+                      "name": "mount",
+                      "collected": false,
+                      "objective": "savage",
+                      "item": "Ramuh Crystal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "raidset": "Eden's Promise",
+              "raids": [
+                {
+                  "name": "Eden's Promise: Litany",
+                  "id": 747,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112409.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Don't be Afraid"
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Promise: Umbra",
+                  "id": 749,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112407.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Promise: Anamorphosis",
+                  "id": 751,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112411.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "The Legendary Beast"
+                    }
+                  ]
+                },
+                {
+                  "name": "Eden's Promise: Eternity",
+                  "id": 758,
+                  "type": "raid",
+                  "image": "https://xivapi.com/i/112000/112413.png",
+                  "objectives": [
+                    {
+                      "name": "normal",
+                      "completed": false
+                    },
+                    {
+                      "name": "savage",
+                      "completed": false
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Promises to Keep"
+                    },
+                    {
+                      "name": "minion",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Wind-up Gaia"
+                    },
+                    {
+                      "name": "minion",
+                      "collected": false,
+                      "objective": "savage",
+                      "item": "Wind-up Gaia"
+                    },
+                    {
+                      "name": "ttcard",
+                      "collected": false,
+                      "objective": "normal",
+                      "item": "Eden's Promise"
+                    },
+                    {
+                      "name": "mount",
+                      "collected": false,
+                      "objective": "savage",
+                      "item": "Eden Crystal"
+                    },
+                    {
+                      "name": "orchroll",
+                      "collected": false,
+                      "objective": "savage",
+                      "item": "The Extreme"
+                    }
+                  ]
                 }
               ]
             }

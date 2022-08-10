@@ -71,6 +71,8 @@ const isShining = (str: string) => { return elemToShine.value === str }
 	.duty-content {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
+		row-gap: .2em;
 		justify-content: space-around;
 		font-family: "Eurostile Regular";
 	}
