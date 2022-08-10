@@ -4,8 +4,7 @@ import { type ExpansionType } from '../types';
 import DutyContainer from "./DutyContainer.vue"
 
 const props = defineProps<{
-  exp: ExpansionType,
-  last: { default: false, type: boolean },
+  exp: ExpansionType
 }>()
 
 </script>
@@ -39,6 +38,10 @@ const props = defineProps<{
   cursor: pointer;
 }
 
+.content {
+  justify-content: center;
+}
+
 .view {
   &[data-expansion="A Realm Reborn"] {
     background-image: url("@/assets/img/bg/Aether.png");
@@ -50,6 +53,10 @@ const props = defineProps<{
 
   &[data-expansion="Stormblood"] {
     background-image: url("@/assets/img/bg/stormblood.webp");
+  }
+
+  &[data-expansion="Shadowbringers"] {
+    background-image: url("@/assets/img/bg/shadowbringers.webp");
   }
 }
 </style>

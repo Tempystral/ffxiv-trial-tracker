@@ -44,7 +44,8 @@ onMounted(() => {
 <template lang='pug'>
 mixin detail
 	details(:open='prefs.isOpen(collection.title)' @toggle='setOpen($event, collection.title)').dutyDetail
-		summary.group-title.title.is-2.has-text-centered #{collection.title}
+		summary.group-title.has-text-centered.title.is-2
+			.title.is-2 #{collection.title}
 		block
 
 if collection.dutyType == 'raid'
@@ -97,6 +98,11 @@ else if collection.dutyType == 'special'
 	font-family: "Jupiter Pro Regular";
 	@include bevel($gold-fill, $gold-shadow, white);
 	-webkit-font-smoothing: subpixel-antialiased;
+	text-align: center;
+
+	.title {
+		display: inline-block;
+	}
 }
 
 .column:not([data-dutytype="special"]) {
