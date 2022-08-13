@@ -4,6 +4,7 @@ import Modal from '/components/Modal.vue';
 import localforage from 'localforage';
 import { useDutyStore } from './store/DutyStore';
 import { getLocalForageSafe, isUserData } from './ts/util';
+import Navbar from '/components/Navbar.vue';
 
 // Ensure localforage is set up before anything else
 localforage.config({
@@ -30,20 +31,16 @@ store.$subscribe((_, state) => {
 	localforage.setItem("duties", JSON.stringify(state));
 });
 
-const showModal = ref(false)
+const showModal = ref(false);
 
 function toggleModal() {
 	showModal.value = !showModal.value;
 }
 
-
 </script>
 
 <template lang="pug">
-//- TODO: Navbar (put button in navbar or no?)
-.box#settingsButton
-	.image.is-48x48(@click='toggleModal')
-		img(src="/assets/img/icon/meteor_flat.png")
+Navbar(@openModal="toggleModal")
 
 //- Renders the contents returned by the vue router
 router-view
