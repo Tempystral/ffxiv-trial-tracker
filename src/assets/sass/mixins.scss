@@ -82,3 +82,45 @@ $silver-shadow: #4b4b4b;
   width: 100%;
   height: 100%;
 }
+
+@mixin backgroundGlow($color) {
+  background-image: radial-gradient(
+    ellipse at center,
+    $color 0%,
+    transparent 100%
+  );
+}
+
+@mixin skew($deg) {
+  transform: skewX(-$deg);
+  -ms-transform: skewX(-$deg);
+  -webkit-transform: skewX(-$deg);
+  -webkit-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+
+  background-color: inherit;
+  position: relative;
+  left: -5%;
+  overflow: clip;
+
+  &::before {
+    // Background image
+    content: "";
+    transform: skewX($deg);
+    -ms-transform: skewX($deg);
+    -webkit-transform: skewX($deg);
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
+
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    left: 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    transition: all 0.25s ease;
+  }
+}

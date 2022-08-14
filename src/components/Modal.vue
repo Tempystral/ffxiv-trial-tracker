@@ -91,7 +91,7 @@ onMounted(() => {
 					summary Credits
 					div
 						p Credits
-
+		hr
 		footer.modal-card-foot.is-block
 			.level
 				.level-left
@@ -144,6 +144,8 @@ onMounted(() => {
 	.modal-card-foot {
 		border: none;
 		background: none;
+		margin-inline: 5px;
+		padding-inline: 15px;
 	}
 
 	hr {

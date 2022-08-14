@@ -93,6 +93,7 @@ else if collection.dutyType == 'special'
 
 <style lang="scss">
 @use "@/assets/sass/mixins" as *;
+@use "@/assets/sass/variables" as *;
 
 .group-title {
 	font-family: "Jupiter Pro Regular";
@@ -108,7 +109,7 @@ else if collection.dutyType == 'special'
 .column:not([data-dutytype="special"]) {
 	.duty-group {
 		@include metal-border;
-		background: #08084e9f;
+		background: $ff-blue;
 	}
 }
 
@@ -158,7 +159,7 @@ else if collection.dutyType == 'special'
 
 .raid-set-title-container {
 	padding: 0;
-	background-color: rgba(0, 0, 0, 0);
+	background-color: transparent;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
