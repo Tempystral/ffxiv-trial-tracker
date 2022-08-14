@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const emit = defineEmits([
 	"openModal"
@@ -7,6 +10,11 @@ const emit = defineEmits([
 function showModal() {
 	emit("openModal");
 }
+
+function navigate(path: string) {
+	router.push(path);
+}
+
 </script>
 
 
@@ -15,125 +23,211 @@ function showModal() {
 .navbar 
 	.navbar-menu
 		.navbar-start
-			.navbar-item FFXIV Trial Tracker
+			.navbar-item
+				.title.is-4 Final Fantasy XIV<br>Trial Tracker
 			//- This is just for spacing to keep the expansion list centered
-		.navbar-item#menu-arr
-		.navbar-item#menu-hw
-		.navbar-item#menu-sb
-		.navbar-item#menu-shb
+		.navbar-item#menu-all(@click="navigate('/')")
+		.navbar-item#menu-arr(@click="navigate('/ex/0')")
+		.navbar-item#menu-hw(@click="navigate('/ex/1')")
+		.navbar-item#menu-sb(@click="navigate('/ex/2')")
+		.navbar-item#menu-shb(@click="navigate('/ex/3')")
 		.navbar-end
 			.navbar-item
-				.box#settingsButton(@click='showModal')
-					.image.is-48x48
-						img(src="/assets/img/icon/meteor_flat.png")
+				.box#settingsButtonBox
+					.image.is-48x48#settingsButton(@click='showModal')
+						div.button-shine
+						img(src="/assets/img/icon/settings.png")
 
 </template>
 
 <style lang="scss">
-@mixin backgroundGlow($color ) {
-	background-image: radial-gradient(ellipse at center, $color 0%, transparent 100%);
-}
+@use "@/assets/sass/mixins" as *;
+@use "@/assets/sass/variables" as *;
 
-@mixin skew {
-	background-color: inherit;
-	transform: skewX(-35deg);
-	-ms-transform: skewX(-35deg);
-	/* IE 9 */
-	-webkit-transform: skewX(-35deg);
-	/* Safari and Chrome */
-	position: relative;
-	overflow: clip;
-	-webkit-transform-origin: bottom left;
-	-ms-transform-origin: bottom left;
-	transform-origin: bottom left;
+.navbar {
+	margin-inline: .5em;
+	background-color: $navbar-bg  !important;
 
-	&::before {
-		content: "";
-		transform: skewX(35deg);
-		-ms-transform: skewX(35deg);
-		/* IE 9 */
-		-webkit-transform: skewX(35deg);
-		/* Safari and Chrome */
-		-webkit-transform-origin: bottom left;
-		-ms-transform-origin: bottom left;
-		transform-origin: bottom left;
+	@include metal-border;
+	border-top: none;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
 
-		position: absolute;
-		width: 150%;
-		height: 100%;
-		left: 0%;
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: 30%;
-		transition: all .25s ease;
+	.navbar-menu {
+		justify-content: center;
+		background: none;
 
+		.navbar-start .navbar-item .title {
+			color: white;
+			font-family: "Eurostile Regular";
+
+		}
+
+		.navbar-start {
+			z-index: 10;
+			position: relative;
+
+			.navbar-item {
+				background: $navbar-fg;
+				border-bottom-left-radius: 10px;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				width: 75%;
+				height: 100%;
+				right: -.75rem;
+				z-index: -1;
+				background: $navbar-fg;
+				border-right: solid white 2px;
+				transform-origin: bottom right;
+				-ms-transform: skew(-35deg, 0deg);
+				-webkit-transform: skew(-35deg, 0deg);
+				transform: skew(-35deg, 0deg);
+			}
+		}
+
+		.navbar-end {
+			z-index: 10;
+			position: relative;
+
+			.navbar-item {
+				background: $navbar-fg;
+				border-bottom-right-radius: 10px;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				width: 75%;
+				height: 100%;
+				left: -.75rem;
+				z-index: -1;
+				background: $navbar-fg;
+				border-left: solid white 2px;
+				transform-origin: top left;
+				-ms-transform: skew(-35deg, 0deg);
+				-webkit-transform: skew(-35deg, 0deg);
+				transform: skew(-35deg, 0deg);
+			}
+		}
+
+		// SKEW MENU
+		>.navbar-item {
+			// Only direct descendants get skewed
+			@include skew(35deg);
+			z-index: 1;
+			cursor: pointer;
+			width: 12%;
+			//min-width: 150px;
+
+			transition: width .25s ease;
+
+			&#menu-all {
+				width: 8%;
+				//min-width: 100px;
+
+
+				&::before {
+					background-position: 60%;
+					background-size: auto 75%;
+				}
+
+				&:hover {
+					width: 12%;
+
+					&::before {
+						background-position: 50%;
+					}
+				}
+			}
+
+			&:hover {
+				width: 20%;
+			}
+		}
 	}
-}
 
-.navbar-menu {
-	justify-content: center;
-	background: black;
+	.navbar-item {
+		img {
+			max-height: 4.5rem !important;
+		}
 
-	>.navbar-item {
-		// Direct descendants get skewed only
-		@include skew;
-		cursor: pointer;
-		width: 12%;
-		transition: all .25s ease;
+		// BACKGROUNDS
+		&#menu-all {
+			@include backgroundGlow(lightgrey);
 
-		&:hover {
-			width: 25%;
+			&::before {
+				background-image: url("@/assets/img/icon/meteor_flat.png");
+			}
+		}
+
+		&#menu-arr {
+			@include backgroundGlow(skyblue);
+
+			&::before {
+				background-image: url("@/assets/img/logos/FFXIV_ARR.webp");
+			}
+		}
+
+		&#menu-hw {
+			@include backgroundGlow(maroon);
+
+			&::before {
+				background-image: url("@/assets/img/logos/FFXIV_Heavensward.webp");
+			}
+		}
+
+		&#menu-sb {
+			@include backgroundGlow(orange);
+
+			&::before {
+				background-image: url("@/assets/img/logos/FFXIV_Stormblood.webp");
+			}
+		}
+
+		&#menu-shb {
+			@include backgroundGlow(purple);
+
+			&::before {
+				background-image: url("@/assets/img/logos/FFXIV_Shadowbringers.webp");
+			}
 		}
 	}
 }
 
-.navbar-item img {
-	max-height: 4.5rem !important;
-}
 
-
-
-#menu-arr {
-	@include backgroundGlow(skyblue);
-
-	&::before {
-		background-image: url("@/assets/img/logos/FFXIV_ARR.webp");
-	}
-}
-
-#menu-hw {
-	@include backgroundGlow(maroon);
-
-	&::before {
-		background-image: url("@/assets/img/logos/FFXIV_Heavensward.webp");
-	}
-}
-
-#menu-sb {
-	@include backgroundGlow(orange);
-
-	&::before {
-		background-image: url("@/assets/img/logos/FFXIV_Stormblood.webp");
-	}
-}
-
-#menu-shb {
-	@include backgroundGlow(purple);
-
-	&::before {
-		background-image: url("@/assets/img/logos/FFXIV_Shadowbringers.webp");
-	}
-}
-
-#settingsButton {
+#settingsButtonBox {
 	background: none;
 	border: none;
 	transition: all 0.1s ease-in-out;
 
-	&:hover {
-		transform: scale(0.95);
+	#settingsButton {
+		cursor: pointer;
+
+		&:hover {
+			transform: scale(0.95);
+		}
 	}
 
-	cursor: pointer;
+	&.image {
+
+		.button-shine {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			border-radius: 5%;
+			box-shadow: inset 0px 2px 3px 0px rgb(253, 244, 218);
+			z-index: 10;
+		}
+
+		img {
+			border-radius: 5%;
+			box-shadow: 0px 2px 0px 2px black;
+		}
+	}
+
+
 }
 </style>
