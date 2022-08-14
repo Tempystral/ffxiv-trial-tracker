@@ -64,11 +64,14 @@ $silver-shadow: #4b4b4b;
 
 @mixin gold-border {
   border: {
-    style: ridge;
+    //image: url("@/assets/img/theme/frame_gold.png");
     width: 4px;
     radius: 0.8em;
-    color: #9b7e52 #746035;
+    //color: #9b7e52 #746035;
   }
+  border-image-source: url("@/assets/img/theme/frame_gold.png");
+  border-image-width: 1em;
+  border-image-slice: 30%;
 }
 
 @mixin fill-element {

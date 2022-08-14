@@ -43,7 +43,7 @@ function reset() {
 
 onMounted(() => {
 	document.querySelectorAll("details.modalDetail").forEach((el) => {
-		new Accordion(el as HTMLDetailsElement, "p");
+		new Accordion(el as HTMLDetailsElement, "div");
 	});
 });
 
@@ -77,8 +77,20 @@ onMounted(() => {
 
 			.box
 				details.modalDetail
+					summary Frequently-Asked Questions
+					div
+						dl
+							dt Q: Why is Urth's Fount listed with the ARR Extremes?
+							dd A: It's as difficult as the early extremes and drops unique loot, so it's worth tracking like an Extreme.
+
+							dt Q: Do people actually ask questions all that frequently?
+							dd A: Quiet, you.
+
+			.box
+				details.modalDetail
 					summary Credits
-					p Credits
+					div
+						p Credits
 
 		footer.modal-card-foot.is-block
 			.level
@@ -108,6 +120,8 @@ onMounted(() => {
 	background-image: linear-gradient(#565759 0%, #2f2f2c 20%);
 
 	p,
+	dd,
+	dt,
 	label,
 	summary {
 		font-family: "Eurostile Regular", Arial, Helvetica, sans-serif;
