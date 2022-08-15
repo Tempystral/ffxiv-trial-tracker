@@ -1,0 +1,766 @@
+{
+	"name": "A Realm Reborn",
+	"image": "/img/banners/arr_logo_small.png",
+	"id": "2",
+	"collections": [
+		{
+			"title": "Extreme Trials (A Realm Reborn)",
+			"dutyType": "trial",
+			"duties": [
+				{
+					"name": "Urth's Fount",
+					"id": 82,
+					"type": "special",
+					"image": "https://xivapi.com/i/112000/112065.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Odin"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "The Corpse Hall"
+						}
+					]
+				},
+				{
+					"name": "the Bowl of Embers (Extreme)",
+					"id": 63,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112028.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Ifrit"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Primal Judgement"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Aithon"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Nightmare"
+						}
+					]
+				},
+				{
+					"name": "the Navel (Extreme)",
+					"id": 64,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112029.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Titan"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Under the Weight"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Gullfaxi"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Nightmare"
+						}
+					]
+				},
+				{
+					"name": "the Howling Eye (Extreme)",
+					"id": 65,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112030.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Garuda"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Fallen Angel"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Xanthos"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Nightmare"
+						}
+					]
+				},
+				{
+					"name": "Thornmarch (Extreme)",
+					"id": 67,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112050.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Good King Moggle Mog XII "
+						},
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Good King Moggle Mog XII"
+						}
+					]
+				},
+				{
+					"name": "the Minstrel's Ballad: Ultima's Bane",
+					"id": 68,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112032.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Ultima Weapon"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "The Maker's Ruin"
+						}
+					]
+				},
+				{
+					"name": "the Whorleater (Extreme)",
+					"id": 73,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112052.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Leviathan"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Wreck to the Seaman"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Through the Maelstrom"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Enbarr"
+						}
+					]
+				},
+				{
+					"name": "the Striking Tree (Extreme)",
+					"id": 78,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112063.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Ramuh"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Thunder Rolls"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Markab"
+						}
+					]
+				},
+				{
+					"name": "the Akh Afah Amphitheatre (Extreme)",
+					"id": 80,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112074.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Shiva"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Footsteps in the Snow"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Oblivion"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Boreas"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Inspector Hildibrand",
+			"dutyType": "special",
+			"duties": [
+				{
+					"name": "Battle on the Big Bridge",
+					"id": 20021,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112054.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Gilgamesh & Enkidu"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Battle on the Big Bridge "
+						}
+					]
+				},
+				{
+					"name": "The Dragon's Neck",
+					"id": 20026,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112075.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Ultros & Typhon"
+						},
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Terra Branford"
+						},
+						{
+							"name": "minion",
+							"collected": false,
+							"objective": "normal",
+							"item": "Wind-up Ultros"
+						}
+					]
+				},
+				{
+					"name": "Battle in the Big Keep",
+					"id": 20030,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112080.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Bartz Klauser"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Battle on the Big Bridge"
+						},
+						{
+							"name": "minion",
+							"collected": false,
+							"objective": "normal",
+							"item": "Enkidu"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Crystal Tower",
+			"dutyType": "allianceraid",
+			"duties": [
+				{
+					"name": "the Labyrinth of the Ancients",
+					"id": 92,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112033.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Hubris"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Tumbling Down"
+						},
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Phlegethon"
+						}
+					]
+				},
+				{
+					"name": "Syrcus Tower",
+					"id": 102,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112061.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Xande"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Now I Know the Truth"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Out of the Labyrinth"
+						},
+						{
+							"name": "orchroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Shattered"
+						},
+						{
+							"name": "minion",
+							"collected": false,
+							"objective": "normal",
+							"item": "Wind-up Onion Knight"
+						}
+					]
+				},
+				{
+					"name": "the World of Darkness",
+					"id": 111,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112079.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Blind to the Dark"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Hunger"
+						},
+						{
+							"name": "minion",
+							"collected": false,
+							"objective": "normal",
+							"item": "Puff of Darkness"
+						},
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Onion Knight"
+						},
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Cloud of Darkness"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Coils of Bahamut",
+			"dutyType": "raid",
+			"duties": [
+				{
+					"raidset": "the Binding Coil of Bahamut",
+					"raids": [
+						{
+							"name": "the Binding Coil of Bahamut - Turn 1",
+							"id": 30002,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112043.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Binding Coil of Bahamut - Turn 2",
+							"id": 30003,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112044.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Binding Coil of Bahamut - Turn 3",
+							"id": 30004,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112045.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Binding Coil of Bahamut - Turn 4",
+							"id": 30005,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112046.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Binding Coil of Bahamut - Turn 5",
+							"id": 30006,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112047.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							],
+							"rewards": [
+								{
+									"name": "fadedroll",
+									"collected": false,
+									"item": "Thunderer",
+									"objective": "normal"
+								}
+							]
+						}
+					]
+				},
+				{
+					"raidset": "the Second Coil of Bahamut",
+					"raids": [
+						{
+							"name": "the Second Coil of Bahamut - Turn 1",
+							"image": "https://xivapi.com/i/112000/112038.png",
+							"id": 30007,
+							"type": "raid",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Second Coil of Bahamut - Turn 2",
+							"image": "https://xivapi.com/i/112000/112039.png",
+							"id": 30008,
+							"type": "raid",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Second Coil of Bahamut - Turn 3",
+							"image": "https://xivapi.com/i/112000/112040.png",
+							"id": 30009,
+							"type": "raid",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Second Coil of Bahamut - Turn 4",
+							"image": "https://xivapi.com/i/112000/112041.png",
+							"id": 30010,
+							"type": "raid",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							],
+							"rewards": [
+								{
+									"name": "fadedroll",
+									"collected": false,
+									"objective": "normal",
+									"item": "Rise of the White Raven"
+								},
+								{
+									"name": "fadedroll",
+									"collected": false,
+									"objective": "savage",
+									"item": "Rise of the White Raven"
+								}
+							]
+						}
+					]
+				},
+				{
+					"raidset": "the Final Coil of Bahamut",
+					"raids": [
+						{
+							"name": "the Final Coil of Bahamut - Turn 1",
+							"image": "https://xivapi.com/i/112000/112069.png",
+							"id": 30016,
+							"type": "raid",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Final Coil of Bahamut - Turn 2",
+							"image": "https://xivapi.com/i/112000/112070.png",
+							"id": 30017,
+							"type": "raid",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "the Final Coil of Bahamut - Turn 3",
+							"image": "https://xivapi.com/i/112000/112071.png",
+							"id": 30018,
+							"type": "raid",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							],
+							"rewards": [
+								{
+									"name": "fadedroll",
+									"collected": false,
+									"item": "From the Ashes",
+									"objective": "normal"
+								}
+							]
+						},
+						{
+							"name": "the Final Coil of Bahamut - Turn 4",
+							"image": "https://xivapi.com/i/112000/112072.png",
+							"id": 30019,
+							"type": "raid",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								}
+							],
+							"rewards": [
+								{
+									"name": "fadedroll",
+									"collected": false,
+									"item": "Answers",
+									"objective": "normal"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

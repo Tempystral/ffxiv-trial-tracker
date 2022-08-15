@@ -1,0 +1,598 @@
+{
+	"name": "Heavensward",
+	"image": "/img/banners/hw_logo_small.png",
+	"id": "3",
+	"collections": [
+		{
+			"title": "Extreme Trials (Heavensward)",
+			"dutyType": "trial",
+			"duties": [
+				{
+					"name": "Thok ast Thok (Extreme)",
+					"id": 87,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112107.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Ravana"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "The Hand That Gives the Rose"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Unbending Steel"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Rose Lanner"
+						}
+					]
+				},
+				{
+					"name": "the Limitless Blue (Extreme)",
+					"id": 89,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112105.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Bismarck"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "The Limitless Blue"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Woe That Is Madness"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "White Lanner"
+						}
+					]
+				},
+				{
+					"name": "the Minstrel's Ballad: Thordan's Reign",
+					"id": 91,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112122.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Archbishop Thordan VII"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Heroes"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Round Lanner"
+						}
+					]
+				},
+				{
+					"name": "Containment Bay S1T7 (Extreme)",
+					"id": 135,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112127.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Sephirot"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Fiend"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Warring Lanner"
+						}
+					]
+				},
+				{
+					"name": "the Minstrel's Ballad: Nidhogg's Rage",
+					"id": 170,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112161.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Nidhogg"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "The Horde"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Dark Lanner"
+						}
+					]
+				},
+				{
+					"name": "Containment Bay P1T6 (Extreme)",
+					"id": 184,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112202.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Sophia"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Equilibrium"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Sophic Lanner"
+						}
+					]
+				},
+				{
+					"name": "Containment Bay Z1T9 (Extreme)",
+					"id": 224,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112213.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Zurvan"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Infinity"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Demonic Lanner"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Shadow of Mhach",
+			"dutyType": "allianceraid",
+			"duties": [
+				{
+					"name": "the Void Ark",
+					"id": 120,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112118.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Echidna"
+						},
+						{
+							"name": "minion",
+							"collected": false,
+							"objective": "normal",
+							"item": "Wind-up Echidna"
+						}
+					]
+				},
+				{
+					"name": "the Weeping City of Mhach",
+					"id": 168,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112162.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Calofisteri"
+						},
+						{
+							"name": "minion",
+							"collected": false,
+							"objective": "normal",
+							"item": "Wind-up Calofisteri"
+						}
+					]
+				},
+				{
+					"name": "Dun Scaith",
+					"id": 220,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112203.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Diablos Hollow"
+						},
+						{
+							"name": "minion",
+							"collected": false,
+							"objective": "normal",
+							"item": "Wind-up Scathach"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Alexander",
+			"dutyType": "raid",
+			"duties": [
+				{
+					"raidset": "Gordius",
+					"raids": [
+						{
+							"name": "Alexander - The Fist of the Father",
+							"id": 112,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112095.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Cuff of the Father",
+							"id": 113,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112096.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Arm of the Father",
+							"id": 114,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112097.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Burden of the Father",
+							"id": 115,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112098.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						}
+					]
+				},
+				{
+					"raidset": "Midas",
+					"raids": [
+						{
+							"name": "Alexander - The Fist of the Son",
+							"id": 136,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112128.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Cuff of the Son",
+							"id": 137,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112129.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Arm of the Son",
+							"id": 138,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112130.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Burden of the Son",
+							"id": 139,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112131.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							],
+							"rewards": [
+								{
+									"name": "ttcard",
+									"collected": false,
+									"item": "Brute Justice",
+									"objective": "normal"
+								},
+								{
+									"name": "minion",
+									"collected": false,
+									"item": "Faustlet",
+									"objective": "savage"
+								},
+								{
+									"name": "ttcard",
+									"collected": false,
+									"item": "Brute Justice",
+									"objective": "savage"
+								}
+							]
+						}
+					]
+				},
+				{
+					"raidset": "The Creator",
+					"raids": [
+						{
+							"name": "Alexander - The Eyes of the Creator",
+							"id": 186,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112188.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Breath of the Creator",
+							"id": 187,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112189.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Heart of the Creator",
+							"id": 188,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112190.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							]
+						},
+						{
+							"name": "Alexander - The Soul of the Creator",
+							"id": 189,
+							"type": "raid",
+							"image": "https://xivapi.com/i/112000/112191.png",
+							"objectives": [
+								{
+									"name": "normal",
+									"completed": false
+								},
+								{
+									"name": "savage",
+									"completed": false
+								}
+							],
+							"rewards": [
+								{
+									"name": "minion",
+									"collected": false,
+									"item": "Toy Alexander",
+									"objective": "normal"
+								},
+								{
+									"name": "ttcard",
+									"collected": false,
+									"item": "Alexander Prime",
+									"objective": "normal"
+								},
+								{
+									"name": "mount",
+									"collected": false,
+									"item": "Arrhidaeus",
+									"objective": "savage"
+								},
+								{
+									"name": "minion",
+									"collected": false,
+									"item": "Toy Alexander",
+									"objective": "savage"
+								},
+								{
+									"name": "ttcard",
+									"collected": false,
+									"item": "Alexander Prime",
+									"objective": "savage"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -24,27 +24,16 @@ const props = defineProps<{
 </template>
 
 <style lang="scss">
-#settingsButton {
-  position: absolute;
-  right: 0;
-  background: none;
-  border: none;
-  transition: all 0.1s ease-in-out;
-
-  &:hover {
-    transform: scale(0.95);
-  }
-
-  cursor: pointer;
-}
-
 .content {
   justify-content: center;
 }
 
 .view {
   &[data-expansion="A Realm Reborn"] {
-    background-image: url("@/assets/img/bg/Aether.png");
+    background-image: url("@/assets/img/bg/ARR_New.webp");
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
   }
 
   &[data-expansion="Heavensward"] {

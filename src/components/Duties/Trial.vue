@@ -2,7 +2,8 @@
 import { ref } from "vue";
 import { useDutyStore } from '../../store/DutyStore'
 import { Objective, type RewardType, type Duty } from "../../types";
-import { getFullRewardName, getRewardImg } from "../../ts/util";
+import { getFullRewardName } from "../../ts/util";
+import { getRewardImg, getObjectiveImg } from "../../ts/data";
 
 const props = defineProps<{
 	dutyType: string,
