@@ -19,14 +19,14 @@ function navigate(path: string) {
 <template lang="pug">
 .navbar 
 	.navbar-menu
-		.navbar-start
+		.navbar-brand
 			.navbar-item(@click="navigate('/')")
-				.title.is-4 FFXIV<br>Trial Tracker
+				.title.is-4 FFXIV Duty<br>Tracker
 		.navbar-item#menu-arr(@click="navigate('/ex/2')")
 		.navbar-item#menu-hw(@click="navigate('/ex/3')")
 		.navbar-item#menu-sb(@click="navigate('/ex/4')")
 		.navbar-item#menu-shb(@click="navigate('/ex/5')")
-		//-.navbar-item#menu-ew(@click="navigate('/ex/6')")
+		//- .navbar-item#menu-ew(@click="navigate('/ex/6')")
 		.navbar-end
 			.navbar-item
 				.box#settingsButtonBox
@@ -52,51 +52,14 @@ function navigate(path: string) {
 		justify-content: center;
 		background: none;
 
-		.navbar-start .navbar-item .title {
-			color: white;
-			font-family: "Eurostile Regular";
+		.navbar-brand {
+			padding-right: 5%;
+			flex-shrink: unset;
 
-		}
+			.navbar-item .title {
+				color: white;
+				font-family: "Jupiter Pro Regular";
 
-		.navbar-start,
-		.navbar-end {
-			z-index: 10;
-			position: relative;
-			text-align: center;
-
-			.navbar-item {
-				background: $navbar-fg;
-				border-bottom-left-radius: 10px;
-				cursor: pointer;
-			}
-
-			&:after {
-				content: "";
-				position: absolute;
-				width: 75%;
-				height: 100%;
-				right: -.75rem;
-				z-index: -1;
-				background: $navbar-fg;
-				border-right: solid white 2px;
-				transform-origin: bottom right;
-				-ms-transform: skew(-35deg, 0deg);
-				-webkit-transform: skew(-35deg, 0deg);
-				transform: skew(-35deg, 0deg);
-			}
-		}
-
-		.navbar-end {
-
-			.navbar-item {
-				border-bottom-right-radius: 10px;
-			}
-
-			&:after {
-				left: -.75rem;
-				border-left: solid white 2px;
-				border-right: none;
-				transform-origin: top left;
 			}
 		}
 
@@ -119,27 +82,35 @@ function navigate(path: string) {
 
 			transition: width .25s ease;
 
-			&#menu-all {
-				width: 8%;
-				//min-width: 100px;
-
-
-				&::before {
-					background-position: 60%;
-					background-size: auto 75%;
-				}
-
-				&:hover {
-					width: 12%;
-
-					&::before {
-						background-position: 50%;
-					}
-				}
-			}
-
 			&:hover {
 				width: 20%;
+			}
+		}
+
+		.navbar-end {
+			z-index: 1;
+			position: relative;
+			text-align: center;
+
+			.navbar-item {
+				background: $navbar-fg;
+				border-bottom-right-radius: 10px;
+				cursor: pointer;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: -.75rem;
+				z-index: -1;
+				background: $navbar-fg;
+				border-left: solid white 2px;
+				transform-origin: top left;
+				-ms-transform: skew(-35deg, 0deg);
+				-webkit-transform: skew(-35deg, 0deg);
+				transform: skew(-35deg, 0deg);
 			}
 		}
 	}
@@ -200,19 +171,20 @@ function navigate(path: string) {
 	}
 }
 
+#settingsButton,
+.navbar-menu .title {
+	cursor: pointer;
+	transition: transform .1s ease-in-out;
+
+	&:hover {
+		transform: scale(0.95);
+	}
+}
 
 #settingsButtonBox {
 	background: none;
 	border: none;
-	transition: all 0.1s ease-in-out;
-
-	#settingsButton {
-		cursor: pointer;
-
-		&:hover {
-			transform: scale(0.95);
-		}
-	}
+	padding-left: 0;
 
 	.image {
 
