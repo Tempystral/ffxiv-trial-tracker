@@ -66,22 +66,4 @@ function getFullRewardName(reward: RewardType): string {
   return ret;
 }
 
-const reward_img_glob = import.meta.globEager("@/assets/img/icon/reward_*.png");
-function getRewardImg(reward: string) {
-  return reward_img_glob[`../assets/img/icon/reward_${reward}.png`].default;
-}
-
-const duty_img_glob = import.meta.globEager(
-  "@/assets/img/icon/duty_raid_*.png"
-);
-function getObjectiveImg(duty: string) {
-  return duty_img_glob[`../assets/img/icon/duty_raid_${duty}.png`].default;
-}
-
-export {
-  isUserData,
-  getFullRewardName,
-  getLocalForageSafe,
-  getRewardImg,
-  getObjectiveImg
-};
+export { isUserData, getFullRewardName, getLocalForageSafe };

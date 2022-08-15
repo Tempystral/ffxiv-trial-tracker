@@ -14,30 +14,25 @@ function showModal() {
 function navigate(path: string) {
 	router.push(path);
 }
-
 </script>
 
-
 <template lang="pug">
-
 .navbar 
 	.navbar-menu
 		.navbar-start
-			.navbar-item
-				.title.is-4 Final Fantasy XIV<br>Trial Tracker
-			//- This is just for spacing to keep the expansion list centered
-		.navbar-item#menu-all(@click="navigate('/')")
-		.navbar-item#menu-arr(@click="navigate('/ex/0')")
-		.navbar-item#menu-hw(@click="navigate('/ex/1')")
-		.navbar-item#menu-sb(@click="navigate('/ex/2')")
-		.navbar-item#menu-shb(@click="navigate('/ex/3')")
+			.navbar-item(@click="navigate('/')")
+				.title.is-4 FFXIV<br>Trial Tracker
+		.navbar-item#menu-arr(@click="navigate('/ex/2')")
+		.navbar-item#menu-hw(@click="navigate('/ex/3')")
+		.navbar-item#menu-sb(@click="navigate('/ex/4')")
+		.navbar-item#menu-shb(@click="navigate('/ex/5')")
+		//-.navbar-item#menu-ew(@click="navigate('/ex/6')")
 		.navbar-end
 			.navbar-item
 				.box#settingsButtonBox
 					.image.is-48x48#settingsButton(@click='showModal')
 						div.button-shine
 						img(src="/assets/img/icon/settings.png")
-
 </template>
 
 <style lang="scss">
@@ -63,13 +58,16 @@ function navigate(path: string) {
 
 		}
 
-		.navbar-start {
+		.navbar-start,
+		.navbar-end {
 			z-index: 10;
 			position: relative;
+			text-align: center;
 
 			.navbar-item {
 				background: $navbar-fg;
 				border-bottom-left-radius: 10px;
+				cursor: pointer;
 			}
 
 			&:after {
@@ -89,27 +87,16 @@ function navigate(path: string) {
 		}
 
 		.navbar-end {
-			z-index: 10;
-			position: relative;
 
 			.navbar-item {
-				background: $navbar-fg;
 				border-bottom-right-radius: 10px;
 			}
 
 			&:after {
-				content: "";
-				position: absolute;
-				width: 75%;
-				height: 100%;
 				left: -.75rem;
-				z-index: -1;
-				background: $navbar-fg;
 				border-left: solid white 2px;
+				border-right: none;
 				transform-origin: top left;
-				-ms-transform: skew(-35deg, 0deg);
-				-webkit-transform: skew(-35deg, 0deg);
-				transform: skew(-35deg, 0deg);
 			}
 		}
 
@@ -119,8 +106,16 @@ function navigate(path: string) {
 			@include skew(35deg);
 			z-index: 1;
 			cursor: pointer;
-			width: 12%;
-			//min-width: 150px;
+			width: 15%; // 12 when Endwalker is added to the navbar
+			border-inline: solid black 1px;
+
+			&#menu-all {
+				border-left-width: 2px;
+			}
+
+			&#menu-ew {
+				border-right-width: 2px;
+			}
 
 			transition: width .25s ease;
 
@@ -194,6 +189,14 @@ function navigate(path: string) {
 				background-image: url("@/assets/img/logos/FFXIV_Shadowbringers.webp");
 			}
 		}
+
+		&#menu-ew {
+			@include backgroundGlow(silver);
+
+			&::before {
+				background-image: url("@/assets/img/logos/FFXIV_Endwalker.webp");
+			}
+		}
 	}
 }
 
@@ -211,7 +214,7 @@ function navigate(path: string) {
 		}
 	}
 
-	&.image {
+	.image {
 
 		.button-shine {
 			position: absolute;

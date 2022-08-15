@@ -1,4 +1,7 @@
+import { range } from "lodash";
+import * as constants from "./ts/constants";
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { getExpansionData } from "./ts/data";
 
 const Single = () => import("/pages/Single.vue");
 const All = () => import("/pages/All.vue");
@@ -8,13 +11,22 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Home",
-    component: All
+    component: All,
+    props: () => ({
+      gamedata: {
+        expansions: constants.expansions.map((x) => getExpansionData(x))
+        // Load all expansions into an array for the main page
+      }
+    })
   },
   {
     path: "/ex/:exp",
     name: "Expansion",
     component: Single,
-    props: true
+    props: (route) => ({
+      exp: parseInt(route.params.exp as string),
+      gamedata: getExpansionData(parseInt(route.params.exp as string))
+    })
   },
   {
     path: "/:catchAll(.*)",
