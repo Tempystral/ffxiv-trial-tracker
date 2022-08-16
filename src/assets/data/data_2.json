@@ -536,7 +536,7 @@
 			"dutyType": "raid",
 			"duties": [
 				{
-					"raidset": "the Binding Coil of Bahamut",
+					"raidset": "The Binding Coil",
 					"raids": [
 						{
 							"name": "the Binding Coil of Bahamut - Turn 1",
@@ -609,7 +609,7 @@
 					]
 				},
 				{
-					"raidset": "the Second Coil of Bahamut",
+					"raidset": "The Second Coil",
 					"raids": [
 						{
 							"name": "the Second Coil of Bahamut - Turn 1",
@@ -692,7 +692,7 @@
 					]
 				},
 				{
-					"raidset": "the Final Coil of Bahamut",
+					"raidset": "The Final Coil",
 					"raids": [
 						{
 							"name": "the Final Coil of Bahamut - Turn 1",
