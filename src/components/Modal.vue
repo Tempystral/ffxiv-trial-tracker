@@ -102,22 +102,13 @@ onMounted(() => {
 
 <style lang="scss">
 @use "@/assets/sass/mixins" as *;
+@use "@/assets/sass/variables" as *;
 
 .modal-card {
-	// &:before {
-	//   @include fill-element;
-	//   // border-style: solid;
-	//   // border-image-source: url("/assets/img/theme/frame_lodestone.png");
-	//   // border-image-slice: 25%;
-	//   // border-image-width: 3em;
-	//   // border-radius: 1em;
-	//   @include gold-border;
-	//   z-index: 1;
-	// }
 
 	@include gold-border;
 	@include contained-bg;
-	background-image: linear-gradient(#565759 0%, #2f2f2c 20%);
+	background-image: $menu-gradient;
 
 	p,
 	dd,
@@ -149,18 +140,7 @@ onMounted(() => {
 	}
 
 	hr {
-		margin: initial;
-		position: relative;
-		left: 2%;
-		width: 96%;
-		border: 0;
-		height: 1px;
-		background: #333;
-		background-image: linear-gradient(to right,
-				#333,
-				#ccc 30%,
-				#ccc 70%,
-				#333 100%);
+		@include faded-hr;
 	}
 }
 </style>
