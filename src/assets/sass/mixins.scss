@@ -1,3 +1,4 @@
+@use "@/assets/sass/variables" as *;
 $gold-fill: #9e8b46;
 $gold-shadow: #664801;
 $silver-fill: #c6d2df;
@@ -118,9 +119,35 @@ $silver-shadow: #4b4b4b;
     width: 150%;
     height: 100%;
     left: 0%;
-    background-size: contain;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: 30%;
     transition: all 0.25s ease;
   }
+}
+
+@mixin scale-on-hover($amount, $time) {
+  transition: transform $time ease-in-out;
+
+  &:hover {
+    transform: scale($amount);
+  }
+}
+
+@mixin indent-on-hover($amount, $time) {
+  transition: padding $time ease-in-out;
+  &:hover {
+    padding-left: calc($amount);
+  }
+}
+
+@mixin faded-hr {
+  margin: initial;
+  position: relative;
+  left: 2%;
+  width: 96%;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: $hr-gradient;
 }
