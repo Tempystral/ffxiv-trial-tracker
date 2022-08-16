@@ -33,6 +33,7 @@ export class Accordion {
     // Add an overflow on the <details> to avoid content overflowing
     this.el.style.overflow = "hidden";
     if (this.isClosing || !this.el.open) {
+      this.summary.classList.add("arrow-shine");
       this.open();
     } else if (this.isExpanding || this.el.open) {
       this.shrink();
@@ -113,6 +114,7 @@ export class Accordion {
     this.isExpanding = false;
     // Remove the overflow hidden and the fixed height
     this.el.style.height = this.el.style.overflow = "";
+    this.summary.classList.remove("arrow-shine");
   }
 
   getMarginBottom(el: HTMLElement): number {

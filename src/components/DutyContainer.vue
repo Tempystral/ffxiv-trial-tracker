@@ -220,8 +220,9 @@ details:not(.modalDetail) {
 	}
 }
 
-.arrow-shine {
-	animation: arrow-shine .5s steps(4) 1;
+.arrow-shine:before,
+.arrow-shine:after {
+	animation: arrow-shine .25s steps(4) 1;
 }
 
 @keyframes arrow-shine {
