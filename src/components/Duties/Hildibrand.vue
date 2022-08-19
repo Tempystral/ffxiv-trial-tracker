@@ -5,6 +5,9 @@ import { usePrefStore } from '../../store/PrefStore';
 import { Objective, type RewardType, type Duty } from "../../types";
 import { getFullRewardName } from "../../ts/util";
 import { getRewardImg, getObjectiveImg } from "../../ts/data";
+import { useShine } from "../../ts/composables/shine";
+import { useStamp } from "../../ts/composables/stamp";
+import { useSpoilers } from "../../ts/composables/spoiler";
 
 const props = defineProps<{
 	dutyType: string,
@@ -13,9 +16,10 @@ const props = defineProps<{
 
 const store = useDutyStore();
 const prefs = usePrefStore();
-const elemToShine = ref("");
-const elemToStamp = ref("");
-const animating = ref(false);
+
+const { elemToShine, shimmer, isShining } = useShine();
+const { elemToStamp, stamp, isStamped } = useStamp(store);
+const { spoil, isRevealed } = useSpoilers(prefs, props.duty);
 
 function markDuty() {
 
@@ -37,32 +41,6 @@ function markReward(reward: RewardType) {
 	spoil();
 
 }
-
-function shimmer(obj: string) {
-	elemToShine.value = obj;
-	setTimeout(() => {
-		elemToShine.value = "";
-	}, 500);
-}
-const isShining = (str: string) => { return elemToShine.value === str }
-
-function stamp(obj: Duty) {
-	if (store.isObjectiveComplete(obj, Objective.NORMAL)) {
-		elemToStamp.value = obj.name;
-		setTimeout(() => {
-			elemToStamp.value = "";
-		}, 500);
-	}
-
-}
-
-const isStamped = (str: string) => { return elemToStamp.value === str }
-
-function spoil() {
-	prefs.spoil(props.duty.name);
-}
-
-const isRevealed = () => { return prefs.isRevealed(props.duty.name); }
 
 </script>
 

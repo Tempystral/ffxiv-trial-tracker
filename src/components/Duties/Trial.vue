@@ -4,6 +4,7 @@ import { useDutyStore } from '../../store/DutyStore'
 import { Objective, type RewardType, type Duty } from "../../types";
 import { getFullRewardName } from "../../ts/util";
 import { getRewardImg, getObjectiveImg } from "../../ts/data";
+import { useShine } from "../../ts/composables/shine";
 
 const props = defineProps<{
 	dutyType: string,
@@ -11,8 +12,7 @@ const props = defineProps<{
 }>()
 
 const store = useDutyStore();
-const elemToShine = ref("");
-const animating = ref(false);
+const { elemToShine, shimmer, isShining } = useShine();
 
 function markDuty() {
 	store.markDone(props.duty, Objective.NORMAL)
@@ -25,15 +25,6 @@ function markReward(reward: RewardType) {
 	console.log(`Marked duty ${props.duty.name}, ${reward.item} as collected`)
 	shimmer(reward.item)
 }
-
-function shimmer(obj: string) {
-	elemToShine.value = obj;
-	setTimeout(() => {
-		elemToShine.value = "";
-	}, 500);
-}
-
-const isShining = (str: string) => { return elemToShine.value === str }
 
 </script>
 

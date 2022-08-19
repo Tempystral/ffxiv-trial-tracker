@@ -5,6 +5,7 @@ import { useDutyStore } from '../../store/DutyStore'
 import { Objective, type RewardType, type Duty } from "../../types";
 import { getFullRewardName } from "../../ts/util";
 import { getRewardImg, getObjectiveImg } from "../../ts/data";
+import { useShine } from "../../ts/composables/shine";
 
 const props = defineProps<{
 	dutyType: string,
@@ -12,7 +13,8 @@ const props = defineProps<{
 }>()
 
 const store = useDutyStore();
-const elemToShine = ref("");
+const { elemToShine, shimmer, isShining } = useShine(700);
+
 const rewards = ref({ "normal": [] as Array<RewardType>, "savage": [] as Array<RewardType> });
 // Set up reward slices
 if (props.duty.rewards != null) {
@@ -32,13 +34,7 @@ function markReward(reward: RewardType) {
 	console.log(`Marked duty ${props.duty.name}, ${reward.item} as collected`)
 	shimmer(reward.item)
 }
-function shimmer(obj: string) {
-	elemToShine.value = obj;
-	setTimeout(() => {
-		elemToShine.value = "";
-	}, 700);
-}
-const isShining = (str: string) => { return elemToShine.value === str }
+
 function getRaidSet(diff: string) { return props.duty.rewards.find(r => { r.name == diff }) }
 function hasRewards(str: string) { return rewards.value[str as keyof object] && (rewards.value[str as keyof object] as Array<RewardType>).length }
 </script>
