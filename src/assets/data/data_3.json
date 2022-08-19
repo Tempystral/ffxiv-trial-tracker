@@ -116,38 +116,6 @@
 					]
 				},
 				{
-					"name": "Containment Bay S1T7 (Extreme)",
-					"id": 135,
-					"type": "trial",
-					"image": "https://xivapi.com/i/112000/112127.png",
-					"objectives": [
-						{
-							"name": "normal",
-							"completed": false
-						}
-					],
-					"rewards": [
-						{
-							"name": "ttcard",
-							"collected": false,
-							"objective": "normal",
-							"item": "Sephirot"
-						},
-						{
-							"name": "fadedroll",
-							"collected": false,
-							"objective": "normal",
-							"item": "Fiend"
-						},
-						{
-							"name": "mount",
-							"collected": false,
-							"objective": "normal",
-							"item": "Warring Lanner"
-						}
-					]
-				},
-				{
 					"name": "the Minstrel's Ballad: Nidhogg's Rage",
 					"id": 170,
 					"type": "trial",
@@ -176,6 +144,44 @@
 							"collected": false,
 							"objective": "normal",
 							"item": "Dark Lanner"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Warring Triad",
+			"dutyType": "warringtriad",
+			"duties": [
+				{
+					"name": "Containment Bay S1T7 (Extreme)",
+					"id": 135,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112127.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Sephirot"
+						},
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"objective": "normal",
+							"item": "Fiend"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"objective": "normal",
+							"item": "Warring Lanner"
 						}
 					]
 				},

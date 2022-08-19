@@ -316,7 +316,7 @@
 				{
 					"name": "Battle on the Big Bridge",
 					"id": 20021,
-					"type": "trial",
+					"type": "hildibrand",
 					"image": "https://xivapi.com/i/112000/112054.png",
 					"objectives": [
 						{
@@ -342,7 +342,7 @@
 				{
 					"name": "The Dragon's Neck",
 					"id": 20026,
-					"type": "trial",
+					"type": "hildibrand",
 					"image": "https://xivapi.com/i/112000/112075.png",
 					"objectives": [
 						{
@@ -374,7 +374,7 @@
 				{
 					"name": "Battle in the Big Keep",
 					"id": 20030,
-					"type": "trial",
+					"type": "hildibrand",
 					"image": "https://xivapi.com/i/112000/112080.png",
 					"objectives": [
 						{

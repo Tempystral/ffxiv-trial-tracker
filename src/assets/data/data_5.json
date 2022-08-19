@@ -134,27 +134,13 @@
 							"item": "To the Edge"
 						}
 					]
-				},
-				{
-					"name": "Memoria Misera (Extreme)",
-					"id": 725,
-					"type": "trial",
-					"image": "https://xivapi.com/i/112000/112381.png",
-					"objectives": [
-						{
-							"name": "normal",
-							"completed": false
-						}
-					],
-					"rewards": [
-						{
-							"name": "ttcard",
-							"collected": false,
-							"objective": "normal",
-							"item": "Varis yae Galvus"
-						}
-					]
-				},
+				}
+			]
+		},
+		{
+			"name": "Sorrow of Werlyt",
+			"dutyType": "weapons",
+			"duties": [
 				{
 					"name": "Cinder Drift (Extreme)",
 					"id": 718,
@@ -248,6 +234,32 @@
 							"collected": false,
 							"objective": "normal",
 							"item": "In the Arms of War"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bozjan Resistance",
+			"dutyType": "bozja",
+			"duties": [
+				{
+					"name": "Memoria Misera (Extreme)",
+					"id": 725,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112381.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "ttcard",
+							"collected": false,
+							"objective": "normal",
+							"item": "Varis yae Galvus"
 						}
 					]
 				}

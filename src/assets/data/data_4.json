@@ -104,70 +104,6 @@
 					]
 				},
 				{
-					"name": "the Jade Stoa (Extreme)",
-					"id": 291,
-					"type": "trial",
-					"image": "https://xivapi.com/i/112000/112274.png",
-					"objectives": [
-						{
-							"name": "normal",
-							"completed": false
-						}
-					],
-					"rewards": [
-						{
-							"name": "fadedroll",
-							"collected": false,
-							"item": "The Jade Stoa",
-							"objective": "normal"
-						},
-						{
-							"name": "mount",
-							"collected": false,
-							"item": "Auspicious Kamuy",
-							"objective": "normal"
-						},
-						{
-							"name": "ttcard",
-							"collected": false,
-							"item": "Byakko",
-							"objective": "normal"
-						}
-					]
-				},
-				{
-					"name": "the Great Hunt (Extreme)",
-					"id": 475,
-					"type": "trial",
-					"image": "https://xivapi.com/i/112000/112290.png",
-					"objectives": [
-						{
-							"name": "normal",
-							"completed": false
-						}
-					],
-					"rewards": [
-						{
-							"name": "minion",
-							"collected": false,
-							"item": "Poogie",
-							"objective": "normal"
-						},
-						{
-							"name": "mount",
-							"collected": false,
-							"item": "Rathalos",
-							"objective": "normal"
-						},
-						{
-							"name": "orchroll",
-							"collected": false,
-							"item": "Proof of a Hero - Monster Hunter: World Version",
-							"objective": "normal"
-						}
-					]
-				},
-				{
 					"name": "the Minstrel's Ballad: Tsukuyomi's Pain",
 					"id": 538,
 					"type": "trial",
@@ -195,6 +131,44 @@
 							"name": "ttcard",
 							"collected": false,
 							"item": "Tsukuyomi",
+							"objective": "normal"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Four Lords",
+			"dutyType": "fourlords",
+			"duties": [
+				{
+					"name": "the Jade Stoa (Extreme)",
+					"id": 291,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112274.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "fadedroll",
+							"collected": false,
+							"item": "The Jade Stoa",
+							"objective": "normal"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"item": "Auspicious Kamuy",
+							"objective": "normal"
+						},
+						{
+							"name": "ttcard",
+							"collected": false,
+							"item": "Byakko",
 							"objective": "normal"
 						}
 					]
@@ -259,6 +233,44 @@
 							"name": "ttcard",
 							"collected": false,
 							"item": "Seiryu",
+							"objective": "normal"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Great Hunt",
+			"dutyType": "monsterhunter",
+			"duties": [
+				{
+					"name": "the Great Hunt (Extreme)",
+					"id": 475,
+					"type": "trial",
+					"image": "https://xivapi.com/i/112000/112290.png",
+					"objectives": [
+						{
+							"name": "normal",
+							"completed": false
+						}
+					],
+					"rewards": [
+						{
+							"name": "minion",
+							"collected": false,
+							"item": "Poogie",
+							"objective": "normal"
+						},
+						{
+							"name": "mount",
+							"collected": false,
+							"item": "Rathalos",
+							"objective": "normal"
+						},
+						{
+							"name": "orchroll",
+							"collected": false,
+							"item": "Proof of a Hero - Monster Hunter: World Version",
 							"objective": "normal"
 						}
 					]
