@@ -2,7 +2,7 @@
 import { type Collection } from '../types';
 import Raid from './Duties/Raid.vue';
 import Trial from './Duties/Trial.vue';
-import Hildibrand from './Duties/Hildibrand.vue';
+import Special from './Duties/Special/Special.vue';
 import { Accordion } from "../ts/accordion";
 import { computed, onActivated, onBeforeMount, onMounted, ref } from 'vue';
 import { usePrefStore } from "../store/PrefStore";
@@ -81,19 +81,21 @@ else if collection.dutyType == 'allianceraid'
 							Trial(:dutyType='collection.dutyType', :duty='duty')
 
 else if collection.dutyType == 'special'
-	.column.is-10-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet(:data-dutyType='collection.dutyType' :data-collection='collection.title')
-		+detail
-			.duty-group.box
-				.group-content.columns.is-multiline.is-centered
-					each duty in collection.duties
-						.column.is-3-fullhd.is-3-widescreen.is-3-desktop.is-4-tablet
-							Hildibrand(:dutyType="collection.dutyType", :duty="duty")
+	Special(:collection='collection')
+	//- .column.is-10-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet(:data-dutyType='collection.dutyType' :data-collection='collection.title')
+	//- 	+detail
+	//- 		.duty-group.box
+	//- 			.group-content.columns.is-multiline.is-centered
+	//- 				each duty in collection.duties
+	//- 					.column.is-3-fullhd.is-3-widescreen.is-3-desktop.is-4-tablet
+	//- 						Hildibrand(:dutyType="collection.dutyType", :duty="duty")
 				
 </template>
 
 <style lang="scss">
 @use "@/assets/sass/mixins" as *;
 @use "@/assets/sass/variables" as *;
+@use "@/assets/sass/animations" as *;
 
 .group-title {
 	font-family: "Jupiter Pro Regular";
@@ -111,50 +113,6 @@ else if collection.dutyType == 'special'
 		@include metal-border;
 		background: $ff-blue;
 	}
-}
-
-.column[data-dutytype="special"] {
-	.box {
-		background: none;
-		box-shadow: none;
-	}
-
-	&[data-collection="Inspector Hildibrand"] {
-		.duty-group {
-			position: relative;
-			display: grid;
-			background-color: black;
-			background-image: url("@/assets/img/special/hildibrand_bg_narrow.png");
-			background-size: contain;
-			background-position: center bottom;
-			background-repeat: no-repeat;
-
-			&::before {
-				content: "";
-				height: 5em;
-			}
-
-			&::after {
-				content: "";
-				height: 20em;
-			}
-
-			clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0 100%);
-
-			.group-content {}
-		}
-	}
-
-	// .duty-group {
-	// 	background-image: "";
-	// 	background-size: contain;
-	// 	background-repeat: no-repeat;
-	// 	border-style: "";
-	// 	border-image-source: "";
-	// 	border-image-slice: 20%;
-	// 	border-image-width: 35px;
-	// 	border-image-outset: 5px;
-	// }
 }
 
 .raid-set-title-container {
@@ -206,7 +164,6 @@ details:not(.modalDetail) {
 
 		&::after {
 			transform: rotate(180deg) translateY(-10%);
-			// transform-origin: 50% 60%;
 		}
 
 		&::before {
@@ -223,15 +180,5 @@ details:not(.modalDetail) {
 .arrow-shine:before,
 .arrow-shine:after {
 	animation: arrow-shine .25s steps(4) 1;
-}
-
-@keyframes arrow-shine {
-	from {
-		background-position: 0px;
-	}
-
-	to {
-		background-position: -184px;
-	}
 }
 </style>

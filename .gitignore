@@ -4,6 +4,7 @@
 **/css/
 **Zone.Identifier
 data/test.json
+**/src/raw/
 
 # Logs
 logs

@@ -87,3 +87,13 @@
     transform: scale(1);
   }
 }
+
+@keyframes arrow-shine {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -184px;
+  }
+}

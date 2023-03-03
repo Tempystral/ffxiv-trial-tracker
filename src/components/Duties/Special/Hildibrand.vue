@@ -1,13 +1,13 @@
 <script setup lang='ts'>
 import { ref } from "vue";
-import { useDutyStore } from '../../store/DutyStore';
-import { usePrefStore } from '../../store/PrefStore';
-import { Objective, type RewardType, type Duty } from "../../types";
-import { getFullRewardName } from "../../ts/util";
-import { getRewardImg, getObjectiveImg } from "../../ts/data";
-import { useShine } from "../../ts/composables/shine";
-import { useStamp } from "../../ts/composables/stamp";
-import { useSpoilers } from "../../ts/composables/spoiler";
+import { useDutyStore } from '../../../store/DutyStore';
+import { usePrefStore } from '../../../store/PrefStore';
+import { Objective, type RewardType, type Duty } from "../../../types";
+import { getFullRewardName } from "../../../ts/util";
+import { getRewardImg, getObjectiveImg } from "../../../ts/data";
+import { useShine } from "../../../ts/composables/shine";
+import { useStamp } from "../../../ts/composables/stamp";
+import { useSpoilers } from "../../../ts/composables/spoiler";
 
 const props = defineProps<{
 	dutyType: string,
@@ -22,7 +22,6 @@ const { elemToStamp, stamp, isStamped } = useStamp(store);
 const { spoil, isRevealed } = useSpoilers(prefs, props.duty);
 
 function markDuty() {
-
 	if (isRevealed()) {
 		store.markDone(props.duty, Objective.NORMAL)
 		console.log(`Marked duty ${props.duty.id} as done`)
@@ -32,14 +31,12 @@ function markDuty() {
 }
 
 function markReward(reward: RewardType) {
-
 	if (isRevealed()) {
 		store.markCollected(props.duty, reward)
 		console.log(`Marked duty ${props.duty.name}, ${reward.item} as collected`)
 		shimmer(reward.item)
 	}
 	spoil();
-
 }
 
 </script>
