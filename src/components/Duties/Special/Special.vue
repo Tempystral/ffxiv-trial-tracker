@@ -6,7 +6,6 @@ import { Accordion } from '../../../ts/accordion';
 import { type Collection } from '../../../types';
 import Hildibrand from './Hildibrand.vue';
 import Trial from '../Trial.vue';
-import Triad from './Triad.vue';
 
 const props = defineProps<{
 	collection: Collection
@@ -55,19 +54,19 @@ if collection.title.includes('Hildibrand')
 					each duty in collection.duties
 						.column.is-3-fullhd.is-3-widescreen.is-3-desktop.is-4-tablet
 							Hildibrand(:dutyType="collection.dutyType", :duty="duty")
-else if collection.title.includes('Triad')
-	.column.is-8-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet(:data-dutyType='collection.dutyType' :data-collection='collection.title')
-		+detail
-			.duty-group.box
-				.triadcontainer
-					#sophia-bg.triadbg
-					#seph-bg.triadbg
-					#zurv-bg.triadbg
-					#border.triadbg
-				.group-content.columns.is-multiline.is-centered
-					each duty in collection.duties
-						.column.is-4-fullhd.is-4-widescreen.is-4-desktop.is-4-tablet
-							Triad(:dutyType='collection.dutyType', :duty='duty')
+//- else if collection.title.includes('Triad')
+//- 	.column.is-8-fullhd.is-12-widescreen.is-12-desktop.is-12-tablet(:data-dutyType='collection.dutyType' :data-collection='collection.title')
+//- 		+detail
+//- 			.duty-group.box
+//- 				.triadcontainer
+//- 					#sophia-bg.triadbg
+//- 					#seph-bg.triadbg
+//- 					#zurv-bg.triadbg
+//- 					#border.triadbg
+//- 				.group-content.columns.is-multiline.is-centered
+//- 					each duty in collection.duties
+//- 						.column.is-4-fullhd.is-4-widescreen.is-4-desktop.is-4-tablet
+//- 							Triad(:dutyType='collection.dutyType', :duty='duty')
 </template>
 
 <style lang="scss">
